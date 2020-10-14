@@ -1,0 +1,21 @@
+project_params:
+  version:
+
+evolutionary_learning_params:
+  population_size:
+  crossover_percentage:
+  mutation_percentage:
+  mutation_rate:
+  max_generations:
+
+multiple_classification_models_params:
+
+dynamic_ensemble_selection_params:
+
+dataset_params:
+
+evaluation_params:
+
+
+
+
