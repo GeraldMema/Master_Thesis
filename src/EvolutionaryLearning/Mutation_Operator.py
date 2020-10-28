@@ -1,4 +1,4 @@
-class Mutation_Operator():
+class Mutation_Operator:
     """
     Add Description
     """

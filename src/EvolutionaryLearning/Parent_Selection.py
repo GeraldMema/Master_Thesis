@@ -1,5 +1,5 @@
+class Parent_Selection:
 
-class Population_Initialization():
     """
     Add Description
     """
@@ -7,7 +7,7 @@ class Population_Initialization():
     def __init__(self):
         pass
 
-    def random_initialization(self):
+    def roulette_wheel_selection(self):
         """
         Add Description
         :param
@@ -15,7 +15,15 @@ class Population_Initialization():
         """
         pass
 
-    def opposition_based_learning_initialization(self):
+    def tournament_selection(self):
+        """
+        Add Description
+        :param
+        :return:
+        """
+        pass
+
+    def random_selection(self):
         """
         Add Description
         :param

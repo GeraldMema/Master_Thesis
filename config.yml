@@ -1,12 +1,12 @@
 project_params:
-  version:
+  version: 0.1.0
 
 evolutionary_learning_params:
-  population_size:
-  crossover_percentage:
+  population_size: 10
+  crossover_percentage: 0.7
   mutation_percentage:
   mutation_rate:
-  max_generations:
+  max_generations: 10
 
 multiple_classification_models_params:
 

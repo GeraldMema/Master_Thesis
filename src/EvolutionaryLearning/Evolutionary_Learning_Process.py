@@ -1,6 +1,4 @@
-
-
-class Fitness_Evaluation():
+class Evolutionary_Learning_Process:
     """
     Add Description
     """
@@ -8,7 +6,7 @@ class Fitness_Evaluation():
     def __init__(self):
         pass
 
-    def fitness_calculation(self):
+    def apply_evolutionary_learning(self):
         """
         Add Description
         :param
@@ -16,4 +14,3 @@ class Fitness_Evaluation():
         """
         pass
 
-    

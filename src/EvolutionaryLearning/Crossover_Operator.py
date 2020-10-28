@@ -1,12 +1,15 @@
 
-class Crossover_Operator():
+class Crossover_Operator:
 
     """
     Add Description
     """
 
-    def __init__(self):
-        pass
+    def __init__(self, p1, p2):
+        self.parent_1 = p1
+        self.parent_2 = p2
+        self.offspring_1 = None
+        self.offspring_2 = None
 
     def single_point_crossover(self):
         """
@@ -16,7 +19,15 @@ class Crossover_Operator():
         """
         pass
 
-    def multi_point_crossover(self):
+    def two_point_crossover(self):
+        """
+        Add Description
+        :param
+        :return:
+        """
+        pass
+
+    def three_point_crossover(self):
         """
         Add Description
         :param
