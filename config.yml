@@ -1,20 +1,36 @@
 project_params:
   version: 0.1.0
+  execution_runs: 1
 
 evolutionary_learning_params:
   population_size: 10
   crossover_percentage: 0.7
-  mutation_percentage:
-  mutation_rate:
+  mutation_percentage: 0.2
+  mutation_rate: 0.05
   max_generations: 10
+  fitness_lambda: 0.1
+
+evolutionary_learning_methods:
+  chromosome_representation: 2D
+  crossover_methods: single_point_crossover
+  mutation_methods: bit_string_mutation
+  parent_selection_method: roulette_wheel_selection
 
 multiple_classification_models_params:
+  fusion_method: majority_voting
+  heterogeneous_classifiers: True
 
 dynamic_ensemble_selection_params:
 
-dataset_params:
+data_params:
+  path: data/
+  filename: Iris.csv
+  target: Species
+  ID: Id
+  normalization: MinMax
 
 evaluation_params:
+  score: f1_micro
 
 
 

@@ -6,18 +6,18 @@ class Solution_Representation:
     Add Description
     """
 
-    def __init__(self, solution_info, representation_method):
+    def __init__(self, solution_info, evolutionary_learning_methods):
         self.solution_info = solution_info
         self.chromosome = None
-        if representation_method == 0:
-            self.representation_method = '1D'
-        elif representation_method == 1:
-            self.representation_method = '2D'
-        elif representation_method == 2:
-            self.representation_method = 'Dual'  # Paper: Novel Genetic Algorithm with Dual Chromosome Representation
-            # for Resource Allocation in Container-Based Clouds
+        self.representation_method = evolutionary_learning_methods['chromosome_representation']
+        if self.representation_method == '1D':
+            self.chromosome_length = solution_info.no_features + solution_info.no_classifiers
+        elif self.representation_method == '2D':
+            self.chromosome_length = solution_info.no_features
+        elif self.representation_method == 'dual':
+            self.chromosome_length = -1 # TODO
         else:
-            self.representation_method = None
+            self.chromosome_length = -1
 
     def oneD_representation(self, selected_classifiers, selected_features):
         """
@@ -53,8 +53,8 @@ class Solution_Representation:
         :return:
         chromosome: a 2D numpy array which represent our solution
         """
-        max_no_classifiers = self.solution.no_classifiers
-        max_no_features = self.solution.no_features
+        max_no_classifiers = self.solution_info.no_classifiers
+        max_no_features = self.solution_info.no_features
         self.chromosome = np.zeros((max_no_classifiers,max_no_features))
 
         for i in range(len(feat_per_clf)):
