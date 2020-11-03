@@ -1,8 +1,13 @@
 import numpy as np
+import random
 from random import randrange
+
 
 from src.EvolutionaryLearning.Parent_Selection import Parent_Selection
 from src.EvolutionaryLearning.Crossover_Operator import Crossover_Operator
+from src.EvolutionaryLearning.Mutation_Operator import Mutation_Operator
+
+
 class Population:
     """
     Add Description
@@ -16,7 +21,8 @@ class Population:
         self.mutation_pop = None
         self.parent_selection_method = evolutionary_learning_methods['parent_selection_method']
         self.crossover_method = evolutionary_learning_methods['crossover_methods']
-
+        self.mutation_method = evolutionary_learning_methods['mutation_methods']
+        self.mutation_rate = evolutionary_learning_params['mutation_rate']
 
     def random_initialization(self):
         """
@@ -30,13 +36,15 @@ class Population:
 
         initial_population = []
 
-        max_no_selected_classifiers = randrange(self.solution_representation.solution_info.no_classifiers)
-        max_no_selected_features = randrange(self.solution_representation.solution_info.no_features)
+        max_no_selected_classifiers = randrange(self.solution_representation.max_no_classifiers)
+        max_no_selected_features = randrange(self.solution_representation.max_no_features)
         if self.solution_representation.representation_method == '1D':
             for _ in range(self.max_population_size):
                 # select random the classifiers and features
-                selected_classifiers = [randrange(self.solution_representation.solution_info.no_classifiers) for _ in range(max_no_selected_classifiers)]
-                selected_features = [randrange(self.solution_representation.solution_info.no_features) for _ in range(max_no_selected_features)]
+                selected_classifiers = [randrange(self.solution_representation.max_no_classifiers) for _ in
+                                        range(max_no_selected_classifiers)]
+                selected_features = [randrange(self.solution_representation.max_no_features) for _ in
+                                     range(max_no_selected_features)]
                 # 1D representation function
                 self.solution_representation.oneD_representation(selected_classifiers, selected_features)
                 # add chromosome to the population
@@ -45,8 +53,8 @@ class Population:
             for _ in range(self.max_population_size):
                 feat_per_clf = []
                 # for each classifier select random the features
-                for c in range(self.solution_representation.solution_info.no_classifiers):
-                    selected_features = [randrange(self.solution_representation.solution_info.no_features) for _ in
+                for c in range(self.solution_representation.max_no_classifiers):
+                    selected_features = [randrange(self.solution_representation.max_no_features) for _ in
                                          range(max_no_selected_features)]
                     feat_per_clf.append(selected_features)
                 # 2D representation function
@@ -70,26 +78,34 @@ class Population:
         """
         pass
 
-    def generate_crossover_population(self, solution_dict, fitness_values, solution_idx, nc):
+    def generate_crossover_population(self, solution_dict, fitness_values, nc):
         k = 0
         offspring = []
         while k < nc:
             # select parents
-            parent_selection = Parent_Selection(solution_dict, fitness_values, solution_idx, self.parent_selection_method)
+            parent_selection = Parent_Selection(solution_dict, fitness_values, self.parent_selection_method)
             p1 = list(parent_selection.mate[0])
             p2 = list(parent_selection.mate[1])
             # apply crossover operator
-            crossover = Crossover_Operator(p1, p2, self.crossover_method, self.solution_representation.chromosome_length)
-            o1 = crossover.offspring_1
-            o2 = crossover.offspring_2
-            # check if new offspring has already been produced
-            # while ((o1 in offspring) or (o2 in offspring)):
-            #    p1 = list(pop.loc[mate_selection[0],:].values[:-1].astype("int64"))
-            #    p2 = list(pop.loc[mate_selection[1],:].values[:-1].astype("int64"))
-            #    crossover = Crossover_Operator(p1, p2)
-            #    o1 = crossover.offspring_1
-            #    o2 = crossover.offspring_2
-            # continue producing
-            offspring.append(o1)
-            offspring.append(o2)
+            crossover = Crossover_Operator(p1, p2, self.crossover_method,
+                                           self.solution_representation.chromosome_length)
+            offspring.append(crossover.offspring_1)
+            offspring.append(crossover.offspring_2)
             k += 2
+        self.crossover_pop = np.unique(np.stack(offspring, axis=0), axis=0)
+
+    def generate_mutation_population(self, solution_dict, nm):
+        # mutation phase
+        m = 0
+        mutants = []
+        while m < nm:
+            mutant_idx = random.choice(list(solution_dict.keys()))
+            parent = solution_dict[mutant_idx]
+            mutation = Mutation_Operator(parent, self.mutation_rate, self.mutation_method,
+                                         self.solution_representation.representation_method)
+            if mutation.mutant not in mutants:
+                mutants.append(mutation.mutant)
+                m += 1
+        self.mutation_pop = np.unique(np.stack(mutants, axis=0), axis=0)
+
+

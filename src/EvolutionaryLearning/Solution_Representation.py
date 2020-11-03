@@ -6,14 +6,15 @@ class Solution_Representation:
     Add Description
     """
 
-    def __init__(self, solution_info, evolutionary_learning_methods):
-        self.solution_info = solution_info
+    def __init__(self, evolutionary_learning_methods, max_no_features, max_no_classifiers):
         self.chromosome = None
+        self.max_no_features = max_no_features
+        self.max_no_classifiers = max_no_classifiers
         self.representation_method = evolutionary_learning_methods['chromosome_representation']
         if self.representation_method == '1D':
-            self.chromosome_length = solution_info.no_features + solution_info.no_classifiers
+            self.chromosome_length = max_no_features + max_no_classifiers
         elif self.representation_method == '2D':
-            self.chromosome_length = solution_info.no_features
+            self.chromosome_length = max_no_features
         elif self.representation_method == 'dual':
             self.chromosome_length = -1 # TODO
         else:
@@ -33,13 +34,12 @@ class Solution_Representation:
         :return:
         chromosome: a numpy array which represent our solution
         """
-        max_no_classifiers = self.solution_info.no_classifiers
-        max_no_features = self.solution_info.no_features
-        self.chromosome = np.zeros(max_no_features+max_no_classifiers)
+
+        self.chromosome = np.zeros(self.max_no_features+self.max_no_classifiers)
         for feat in selected_features:
             self.chromosome[feat] = 1
         for clf in selected_classifiers:
-            self.chromosome[clf + max_no_features] = 1
+            self.chromosome[clf + self.max_no_features] = 1
 
     def twoD_representation(self, feat_per_clf):
         """
@@ -53,11 +53,9 @@ class Solution_Representation:
         :return:
         chromosome: a 2D numpy array which represent our solution
         """
-        max_no_classifiers = self.solution_info.no_classifiers
-        max_no_features = self.solution_info.no_features
-        self.chromosome = np.zeros((max_no_classifiers,max_no_features))
 
-        for i in range(len(feat_per_clf)):
+        self.chromosome = np.zeros((self.max_no_classifiers, self.max_no_features))
+        for i in range(self.max_no_classifiers):
             for feat in feat_per_clf[i]:
                 self.chromosome[i][feat] = 1
 

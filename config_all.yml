@@ -13,20 +13,22 @@ evolutionary_learning_params:
 evolutionary_learning_methods:
   chromosome_representation: [1D,2D,dual]
   crossover_methods: [single_point_crossover, two_point_crossover, three_point_crossover, uniform_crossover, commonality_based_crossover]
-  mutation_ethods: [bit_flip_mutation, bit_string_mutation]
+  mutation_methods: [bit_flip_mutation, bit_string_mutation]
   parent_selection_method: [roulette_wheel_selection, tournament_selection, random_selection]
 
 multiple_classification_models_params:
   fusion_method: [majority_voting,weighted-average]
   heterogeneous_classifiers: True
+  cross_val: [5]
+  evaluation_metric: [f1_micro,f1_macro,recall]
 
 dynamic_ensemble_selection_params:
 
 data_params:
   path: data/
-  filename: Iris.csv
-  target: Species
-  ID: Id
+  filename: [Iris.csv, train.csv]
+  target: [Species, label]
+  ID: [Id, None]
   normalization: [MinMax, Standardization, Normalization]
 
 evaluation_params:

@@ -2,6 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn import preprocessing
 
+
 from src.DataProcessing.Data_Transformation import Data_Transformation
 
 class Data:
@@ -10,6 +11,7 @@ class Data:
     """
 
     def __init__(self, data_params, sep=','):
+        self.features_dict = {}
         self.data_path = data_params['path'] + data_params['filename']
         self.sep = sep
         self.target = data_params['target']
@@ -21,6 +23,7 @@ class Data:
         self.y_cv = None
         self.X_test = None
         self.y_test = None
+        self.features = None
         self.transformation_method = data_params['normalization']
 
     def process(self):
@@ -28,8 +31,9 @@ class Data:
         data = pd.read_csv(self.data_path, self.sep)
 
         # delete the primary key
-        self.ID = data[self.Id_name]
-        del data[self.Id_name]
+        if self.Id_name:
+            self.ID = data[self.Id_name]
+            del data[self.Id_name]
 
         # label encoding
         le = preprocessing.LabelEncoder()
@@ -50,3 +54,7 @@ class Data:
         self.X_test = test_data.drop([self.target], axis=1)
         self.y_cv = cv_data[self.target]
         self.X_cv = cv_data.drop([self.target], axis=1)
+
+        self.features = self.X_train.columns
+        for i in range(len(self.features)):
+            self.features_dict[i] = self.features[i]

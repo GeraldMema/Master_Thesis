@@ -3,20 +3,14 @@ class Solution_Info:
     Add Description
     """
 
-    def __init__(self, classifiers, features):
-        self.classifiers = classifiers
-        self.features = features
-        self.no_classifiers = len(classifiers)
-        self.no_features = len(features)
-        self.classifiers_dict = {}
-        self.features_dict = {}
-        self.set_classifiers()
-        self.set_features()
+    def __init__(self, solution, population_producer):
+        self.chromosome = solution
+        self.features_per_classifiers = None
+        self.fitness_score = -1
+        self.best_fusion_method = None
+        self.population_producer = population_producer
+        self.shape = solution.shape
+        self.prediction_diversity = -1
+        self.prediction_accuracy = -1
 
-    def set_classifiers(self):
-        for idx, clf in enumerate(self.classifiers):
-            self.classifiers_dict[idx] = clf
 
-    def set_features(self):
-        for idx, feat in enumerate(self.features):
-            self.features_dict[idx] = feat

@@ -57,7 +57,7 @@ class Fitness_Evaluation:
         for clf in self.o:
             sum = 0
             for i in range(len(self.o[clf])):
-                sum = sum + (self.o[clf][i] == self.oe[i])[0]  # Change from paper (classification instead of regression)
+                sum = sum + (self.o[clf][i] == self.oe[i]) # Change from paper (classification instead of regression)
             Di[clf] = sum / len(self.o[clf])  # Change from paper (Normalize)
             D = D + (Di[clf] * self.w[clf])
         return Di, D

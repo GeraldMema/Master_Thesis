@@ -24,7 +24,7 @@ class Crossover_Operator:
             else:
                 offspring_1, offspring_2 = None, None
             # check offspring
-            if (sum(offspring_1) != 0) and (sum(offspring_2) != 0):
+            if (sum(offspring_1).any() != 0) and (sum(offspring_2).any() != 0):
                 self.offspring_1 = offspring_1
                 self.offspring_2 = offspring_2
                 valid_offspring = True

@@ -1,36 +1,41 @@
 project_params:
-  version: 0.1.0
+  version: 0.1.1
   execution_runs: 1
 
 evolutionary_learning_params:
   population_size: 10
-  crossover_percentage: 0.7
-  mutation_percentage: 0.2
-  mutation_rate: 0.05
+  crossover_percentage: 0.8
+  mutation_percentage: 0.45
+  mutation_rate: 0.25
   max_generations: 10
-  fitness_lambda: 0.1
+  fitness_lambda: 0.2
 
 evolutionary_learning_methods:
   chromosome_representation: 2D
-  crossover_methods: single_point_crossover
+  crossover_methods: three_point_crossover
   mutation_methods: bit_string_mutation
   parent_selection_method: roulette_wheel_selection
 
 multiple_classification_models_params:
   fusion_method: majority_voting
-  heterogeneous_classifiers: True
+  heterogeneous_classification: True
+  cross_val: 5
+  fitness_score_metric: f1_micro
+  selected_classifiers: [DT3, DT4, DT5, GaussianNB, SGD, Perceptron, KNN1]
 
 dynamic_ensemble_selection_params:
 
 data_params:
+  dataset: digits
   path: data/
-  filename: Iris.csv
-  target: Species
-  ID: Id
-  normalization: MinMax
+  filename: train.csv
+  target: label
+  ID:
+  normalization: Standardization
 
 evaluation_params:
-  score: f1_micro
+  score_metric: f1_micro
+  path: results
 
 
 
