@@ -14,5 +14,6 @@ class Solution_Info:
         self.shape = solution.shape
         self.prediction_diversity = -1
         self.prediction_accuracy = -1
+        self.accuracy_ens_score = -1
 
 

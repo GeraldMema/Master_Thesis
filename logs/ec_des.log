@@ -84816,3 +84816,1239 @@ INFO:root:Generation no: 49
 INFO:root:Best Fitness Score: 0.8326736111111112
 INFO:root:Generation no: 50
 INFO:root:Best Fitness Score: 0.8326736111111112
+INFO:root:*********** EVOLUTIONARY CLASSIFICATION WITH DYNAMIC ENSEMBLE SELECTION ********* 
+INFO:root:Version: 0.1.5
+INFO:root:Execution Run: 0
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:Best Fitness Score: 0.7069444444444444
+INFO:root:Generation no: 2
+INFO:root:Best Fitness Score: 0.7208333333333333
+INFO:root:Generation no: 3
+INFO:root:Best Fitness Score: 0.7395833333333334
+INFO:root:Generation no: 4
+INFO:root:Best Fitness Score: 0.7409722222222224
+INFO:root:Generation no: 5
+INFO:root:Best Fitness Score: 0.7409722222222224
+INFO:root:Generation no: 6
+INFO:root:Best Fitness Score: 0.7409722222222224
+INFO:root:Generation no: 7
+INFO:root:Best Fitness Score: 0.7468750000000001
+INFO:root:Generation no: 8
+INFO:root:Best Fitness Score: 0.7468750000000001
+INFO:root:Generation no: 9
+INFO:root:Best Fitness Score: 0.7468750000000001
+INFO:root:Generation no: 10
+INFO:root:Best Fitness Score: 0.7468750000000001
+INFO:root:Generation no: 11
+INFO:root:Best Fitness Score: 0.7468750000000001
+INFO:root:Generation no: 12
+INFO:root:Best Fitness Score: 0.7468750000000001
+INFO:root:Generation no: 13
+INFO:root:Best Fitness Score: 0.7468750000000001
+INFO:root:Generation no: 14
+INFO:root:Best Fitness Score: 0.7486111111111111
+INFO:root:Generation no: 15
+INFO:root:Best Fitness Score: 0.7510416666666667
+INFO:root:Generation no: 16
+INFO:root:Best Fitness Score: 0.7552083333333334
+INFO:root:Generation no: 17
+INFO:root:Best Fitness Score: 0.7562500000000001
+INFO:root:Generation no: 18
+INFO:root:Best Fitness Score: 0.7562500000000001
+INFO:root:Generation no: 19
+INFO:root:Best Fitness Score: 0.7562500000000001
+INFO:root:Generation no: 20
+INFO:root:Best Fitness Score: 0.7562500000000001
+INFO:root:Generation no: 21
+INFO:root:Best Fitness Score: 0.7562500000000001
+INFO:root:Generation no: 22
+INFO:root:Best Fitness Score: 0.7562500000000001
+INFO:root:Generation no: 23
+INFO:root:Best Fitness Score: 0.7572916666666667
+INFO:root:Generation no: 24
+INFO:root:Best Fitness Score: 0.7572916666666667
+INFO:root:Generation no: 25
+INFO:root:Best Fitness Score: 0.7583333333333333
+INFO:root:Generation no: 26
+INFO:root:Best Fitness Score: 0.7583333333333333
+INFO:root:Generation no: 27
+INFO:root:Best Fitness Score: 0.7590277777777777
+INFO:root:Generation no: 28
+INFO:root:Best Fitness Score: 0.7590277777777777
+INFO:root:Generation no: 29
+INFO:root:Best Fitness Score: 0.7590277777777777
+INFO:root:Generation no: 30
+INFO:root:Best Fitness Score: 0.7590277777777777
+INFO:root:Generation no: 31
+INFO:root:Best Fitness Score: 0.7590277777777777
+INFO:root:Generation no: 32
+INFO:root:Best Fitness Score: 0.7590277777777777
+INFO:root:Generation no: 33
+INFO:root:Best Fitness Score: 0.7590277777777777
+INFO:root:Generation no: 34
+INFO:root:Best Fitness Score: 0.7590277777777777
+INFO:root:Generation no: 35
+INFO:root:Best Fitness Score: 0.7590277777777777
+INFO:root:Generation no: 36
+INFO:root:Best Fitness Score: 0.7590277777777777
+INFO:root:Generation no: 37
+INFO:root:Best Fitness Score: 0.7590277777777777
+INFO:root:Generation no: 38
+INFO:root:Best Fitness Score: 0.7590277777777777
+INFO:root:Generation no: 39
+INFO:root:Best Fitness Score: 0.7590277777777777
+INFO:root:Generation no: 40
+INFO:root:Best Fitness Score: 0.7590277777777777
+INFO:root:Generation no: 41
+INFO:root:Best Fitness Score: 0.7590277777777777
+INFO:root:Generation no: 42
+INFO:root:Best Fitness Score: 0.7597222222222223
+INFO:root:Generation no: 43
+INFO:root:Best Fitness Score: 0.7597222222222223
+INFO:root:Generation no: 44
+INFO:root:Best Fitness Score: 0.7597222222222223
+INFO:root:Generation no: 45
+INFO:root:Best Fitness Score: 0.7597222222222223
+INFO:root:Generation no: 46
+INFO:root:Best Fitness Score: 0.7597222222222223
+INFO:root:Generation no: 47
+INFO:root:Best Fitness Score: 0.7600694444444445
+INFO:root:Generation no: 48
+INFO:root:Best Fitness Score: 0.7600694444444445
+INFO:root:Generation no: 49
+INFO:root:Best Fitness Score: 0.7600694444444445
+INFO:root:Generation no: 50
+INFO:root:Best Fitness Score: 0.7600694444444445
+INFO:root:Execution Run: 1
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:Best Fitness Score: 0.7704861111111111
+INFO:root:Generation no: 2
+INFO:root:Best Fitness Score: 0.7704861111111111
+INFO:root:Generation no: 3
+INFO:root:Best Fitness Score: 0.7704861111111111
+INFO:root:Generation no: 4
+INFO:root:Best Fitness Score: 0.7704861111111111
+INFO:root:Generation no: 5
+INFO:root:Best Fitness Score: 0.7704861111111111
+INFO:root:Generation no: 6
+INFO:root:Best Fitness Score: 0.7704861111111111
+INFO:root:Generation no: 7
+INFO:root:Best Fitness Score: 0.7708333333333334
+INFO:root:Generation no: 8
+INFO:root:Best Fitness Score: 0.771875
+INFO:root:Generation no: 9
+INFO:root:Best Fitness Score: 0.7770833333333333
+INFO:root:Generation no: 10
+INFO:root:Best Fitness Score: 0.7770833333333333
+INFO:root:Generation no: 11
+INFO:root:Best Fitness Score: 0.7770833333333333
+INFO:root:Generation no: 12
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 13
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 14
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 15
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 16
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 17
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 18
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 19
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 20
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 21
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 22
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 23
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 24
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 25
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 26
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 27
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 28
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 29
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 30
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 31
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 32
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 33
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 34
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 35
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 36
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 37
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 38
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 39
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 40
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 41
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 42
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 43
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 44
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 45
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 46
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 47
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 48
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 49
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:Generation no: 50
+INFO:root:Best Fitness Score: 0.7916666666666666
+INFO:root:*********** EVOLUTIONARY CLASSIFICATION WITH DYNAMIC ENSEMBLE SELECTION ********* 
+INFO:root:Version: 0.1.5
+INFO:root:Execution Run: 0
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:Best Fitness Score: 0.7121527777777779
+INFO:root:Generation no: 2
+INFO:root:Best Fitness Score: 0.7121527777777779
+INFO:root:Generation no: 3
+INFO:root:Best Fitness Score: 0.7645833333333334
+INFO:root:Generation no: 4
+INFO:root:Best Fitness Score: 0.7659722222222223
+INFO:root:Generation no: 5
+INFO:root:Best Fitness Score: 0.7659722222222223
+INFO:root:Execution Run: 1
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:Best Fitness Score: 0.6618055555555556
+INFO:root:Generation no: 2
+INFO:root:Best Fitness Score: 0.6666666666666667
+INFO:root:Generation no: 3
+INFO:root:Best Fitness Score: 0.6690972222222222
+INFO:root:Generation no: 4
+INFO:root:Best Fitness Score: 0.679861111111111
+INFO:root:Generation no: 5
+INFO:root:Best Fitness Score: 0.6819444444444444
+INFO:root:*********** EVOLUTIONARY CLASSIFICATION WITH DYNAMIC ENSEMBLE SELECTION ********* 
+INFO:root:Version: 0.1.5
+INFO:root:Execution Run: 0
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:Best Fitness Score: 0.6916666666666667
+INFO:root:Generation no: 2
+INFO:root:Best Fitness Score: 0.6916666666666667
+INFO:root:Generation no: 3
+INFO:root:Best Fitness Score: 0.7000000000000001
+INFO:root:Generation no: 4
+INFO:root:Best Fitness Score: 0.7190972222222223
+INFO:root:Generation no: 5
+INFO:root:Best Fitness Score: 0.721875
+INFO:root:Execution Run: 1
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:Best Fitness Score: 0.686111111111111
+INFO:root:Generation no: 2
+INFO:root:Best Fitness Score: 0.6913194444444445
+INFO:root:Generation no: 3
+INFO:root:Best Fitness Score: 0.7024305555555554
+INFO:root:Generation no: 4
+INFO:root:Best Fitness Score: 0.7197916666666667
+INFO:root:Generation no: 5
+INFO:root:Best Fitness Score: 0.7197916666666667
+INFO:root:*********** EVOLUTIONARY CLASSIFICATION WITH DYNAMIC ENSEMBLE SELECTION ********* 
+INFO:root:Version: 0.1.5
+INFO:root:Execution Run: 0
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:Best Fitness Score: 0.6072916666666666
+INFO:root:Generation no: 2
+INFO:root:Best Fitness Score: 0.6072916666666666
+INFO:root:Generation no: 3
+INFO:root:Best Fitness Score: 0.6083333333333333
+INFO:root:Generation no: 4
+INFO:root:Best Fitness Score: 0.6083333333333333
+INFO:root:Generation no: 5
+INFO:root:Best Fitness Score: 0.6291666666666665
+INFO:root:Execution Run: 1
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:Best Fitness Score: 0.6
+INFO:root:Generation no: 2
+INFO:root:Best Fitness Score: 0.6
+INFO:root:Generation no: 3
+INFO:root:Best Fitness Score: 0.6013888888888889
+INFO:root:Generation no: 4
+INFO:root:Best Fitness Score: 0.6100694444444444
+INFO:root:Generation no: 5
+INFO:root:Best Fitness Score: 0.611111111111111
+INFO:root:*********** EVOLUTIONARY CLASSIFICATION WITH DYNAMIC ENSEMBLE SELECTION ********* 
+INFO:root:Version: 0.1.5
+INFO:root:Execution Run: 0
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:Best Fitness Score: 0.5913194444444443
+INFO:root:Generation no: 2
+INFO:root:Best Fitness Score: 0.592361111111111
+INFO:root:Generation no: 3
+INFO:root:Best Fitness Score: 0.6020833333333333
+INFO:root:Generation no: 4
+INFO:root:Best Fitness Score: 0.6055555555555555
+INFO:root:Generation no: 5
+INFO:root:Best Fitness Score: 0.6072916666666666
+INFO:root:Generation no: 6
+INFO:root:Best Fitness Score: 0.6072916666666666
+INFO:root:Generation no: 7
+INFO:root:Best Fitness Score: 0.6086805555555556
+INFO:root:Generation no: 8
+INFO:root:Best Fitness Score: 0.6086805555555556
+INFO:root:Generation no: 9
+INFO:root:Best Fitness Score: 0.6104166666666666
+INFO:root:Generation no: 10
+INFO:root:Best Fitness Score: 0.6138888888888888
+INFO:root:Generation no: 11
+INFO:root:Best Fitness Score: 0.6163194444444444
+INFO:root:Generation no: 12
+INFO:root:Best Fitness Score: 0.6163194444444444
+INFO:root:Generation no: 13
+INFO:root:Best Fitness Score: 0.6170138888888889
+INFO:root:Generation no: 14
+INFO:root:Best Fitness Score: 0.61875
+INFO:root:Generation no: 15
+INFO:root:Best Fitness Score: 0.61875
+INFO:root:Generation no: 16
+INFO:root:Best Fitness Score: 0.61875
+INFO:root:Generation no: 17
+INFO:root:Best Fitness Score: 0.61875
+INFO:root:Generation no: 18
+INFO:root:Best Fitness Score: 0.61875
+INFO:root:Generation no: 19
+INFO:root:Best Fitness Score: 0.61875
+INFO:root:Generation no: 20
+INFO:root:Best Fitness Score: 0.6197916666666666
+INFO:root:Generation no: 21
+INFO:root:Best Fitness Score: 0.6253472222222222
+INFO:root:Generation no: 22
+INFO:root:Best Fitness Score: 0.6253472222222222
+INFO:root:Generation no: 23
+INFO:root:Best Fitness Score: 0.6253472222222222
+INFO:root:Generation no: 24
+INFO:root:Best Fitness Score: 0.6253472222222222
+INFO:root:Generation no: 25
+INFO:root:Best Fitness Score: 0.6253472222222222
+INFO:root:Generation no: 26
+INFO:root:Best Fitness Score: 0.6253472222222222
+INFO:root:Generation no: 27
+INFO:root:Best Fitness Score: 0.6284722222222221
+INFO:root:Generation no: 28
+INFO:root:Best Fitness Score: 0.6284722222222221
+INFO:root:Generation no: 29
+INFO:root:Best Fitness Score: 0.6305555555555555
+INFO:root:Generation no: 30
+INFO:root:Best Fitness Score: 0.6305555555555555
+INFO:root:Generation no: 31
+INFO:root:Best Fitness Score: 0.6420138888888889
+INFO:root:Generation no: 32
+INFO:root:Best Fitness Score: 0.6420138888888889
+INFO:root:Generation no: 33
+INFO:root:Best Fitness Score: 0.6420138888888889
+INFO:root:Generation no: 34
+INFO:root:Best Fitness Score: 0.6420138888888889
+INFO:root:Generation no: 35
+INFO:root:Best Fitness Score: 0.6451388888888889
+INFO:root:Generation no: 36
+INFO:root:Best Fitness Score: 0.6451388888888889
+INFO:root:Generation no: 37
+INFO:root:Best Fitness Score: 0.6451388888888889
+INFO:root:Generation no: 38
+INFO:root:Best Fitness Score: 0.6451388888888889
+INFO:root:Generation no: 39
+INFO:root:Best Fitness Score: 0.6451388888888889
+INFO:root:Generation no: 40
+INFO:root:Best Fitness Score: 0.6451388888888889
+INFO:root:Generation no: 41
+INFO:root:Best Fitness Score: 0.6451388888888889
+INFO:root:Generation no: 42
+INFO:root:Best Fitness Score: 0.6451388888888889
+INFO:root:Generation no: 43
+INFO:root:Best Fitness Score: 0.6482638888888889
+INFO:root:Generation no: 44
+INFO:root:Best Fitness Score: 0.6482638888888889
+INFO:root:Generation no: 45
+INFO:root:Best Fitness Score: 0.6493055555555556
+INFO:root:Generation no: 46
+INFO:root:Best Fitness Score: 0.6493055555555556
+INFO:root:Generation no: 47
+INFO:root:Best Fitness Score: 0.6607638888888888
+INFO:root:Generation no: 48
+INFO:root:Best Fitness Score: 0.6607638888888888
+INFO:root:Generation no: 49
+INFO:root:Best Fitness Score: 0.6607638888888888
+INFO:root:Generation no: 50
+INFO:root:Best Fitness Score: 0.6607638888888888
+INFO:root:Execution Run: 1
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:Best Fitness Score: 0.5888888888888889
+INFO:root:Generation no: 2
+INFO:root:Best Fitness Score: 0.6086805555555556
+INFO:root:Generation no: 3
+INFO:root:Best Fitness Score: 0.6086805555555556
+INFO:root:Generation no: 4
+INFO:root:Best Fitness Score: 0.6086805555555556
+INFO:root:Generation no: 5
+INFO:root:Best Fitness Score: 0.6086805555555556
+INFO:root:Generation no: 6
+INFO:root:Best Fitness Score: 0.6128472222222221
+INFO:root:Generation no: 7
+INFO:root:Best Fitness Score: 0.6128472222222221
+INFO:root:Generation no: 8
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 9
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 10
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 11
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 12
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 13
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 14
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 15
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 16
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 17
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 18
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 19
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 20
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 21
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 22
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 23
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 24
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 25
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 26
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 27
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 28
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 29
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 30
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 31
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 32
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 33
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 34
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 35
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 36
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 37
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 38
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 39
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 40
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 41
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 42
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 43
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 44
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 45
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 46
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 47
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 48
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 49
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:Generation no: 50
+INFO:root:Best Fitness Score: 0.6378472222222222
+INFO:root:*********** EVOLUTIONARY CLASSIFICATION WITH DYNAMIC ENSEMBLE SELECTION ********* 
+INFO:root:Version: 0.1.5
+INFO:root:Execution Run: 0
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:Best Fitness Score: 0.515625
+INFO:root:Generation no: 2
+INFO:root:Best Fitness Score: 0.515625
+INFO:root:Generation no: 3
+INFO:root:Best Fitness Score: 0.515625
+INFO:root:Generation no: 4
+INFO:root:Best Fitness Score: 0.515625
+INFO:root:Generation no: 5
+INFO:root:Best Fitness Score: 0.515625
+INFO:root:Generation no: 6
+INFO:root:Best Fitness Score: 0.5190972222222222
+INFO:root:Generation no: 7
+INFO:root:Best Fitness Score: 0.5190972222222222
+INFO:root:Generation no: 8
+INFO:root:Best Fitness Score: 0.5190972222222222
+INFO:root:Generation no: 9
+INFO:root:Best Fitness Score: 0.5190972222222222
+INFO:root:Generation no: 10
+INFO:root:Best Fitness Score: 0.5190972222222222
+INFO:root:Generation no: 11
+INFO:root:Best Fitness Score: 0.5190972222222222
+INFO:root:Generation no: 12
+INFO:root:Best Fitness Score: 0.5190972222222222
+INFO:root:Generation no: 13
+INFO:root:Best Fitness Score: 0.5208333333333333
+INFO:root:Generation no: 14
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 15
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 16
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 17
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 18
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 19
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 20
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 21
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 22
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 23
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 24
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 25
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 26
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 27
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 28
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 29
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 30
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 31
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 32
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 33
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 34
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 35
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 36
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 37
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 38
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 39
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 40
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 41
+INFO:root:Best Fitness Score: 0.53125
+INFO:root:Generation no: 42
+INFO:root:Best Fitness Score: 0.5381944444444445
+INFO:root:Generation no: 43
+INFO:root:Best Fitness Score: 0.5381944444444445
+INFO:root:Generation no: 44
+INFO:root:Best Fitness Score: 0.5381944444444445
+INFO:root:Generation no: 45
+INFO:root:Best Fitness Score: 0.5381944444444445
+INFO:root:Generation no: 46
+INFO:root:Best Fitness Score: 0.5486111111111112
+INFO:root:Generation no: 47
+INFO:root:Best Fitness Score: 0.5486111111111112
+INFO:root:Generation no: 48
+INFO:root:Best Fitness Score: 0.5486111111111112
+INFO:root:Generation no: 49
+INFO:root:Best Fitness Score: 0.5486111111111112
+INFO:root:Generation no: 50
+INFO:root:Best Fitness Score: 0.5486111111111112
+INFO:root:Execution Run: 1
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:Best Fitness Score: 0.5121527777777778
+INFO:root:Generation no: 2
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 3
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 4
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 5
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 6
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 7
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 8
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 9
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 10
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 11
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 12
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 13
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 14
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 15
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 16
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 17
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 18
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 19
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 20
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 21
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 22
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 23
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 24
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 25
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 26
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 27
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 28
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 29
+INFO:root:Best Fitness Score: 0.5416666666666666
+INFO:root:Generation no: 30
+INFO:root:Best Fitness Score: 0.5468750000000001
+INFO:root:Generation no: 31
+INFO:root:Best Fitness Score: 0.5468750000000001
+INFO:root:Generation no: 32
+INFO:root:Best Fitness Score: 0.5468750000000001
+INFO:root:Generation no: 33
+INFO:root:Best Fitness Score: 0.5468750000000001
+INFO:root:Generation no: 34
+INFO:root:Best Fitness Score: 0.5468750000000001
+INFO:root:Generation no: 35
+INFO:root:Best Fitness Score: 0.5468750000000001
+INFO:root:Generation no: 36
+INFO:root:Best Fitness Score: 0.5468750000000001
+INFO:root:Generation no: 37
+INFO:root:Best Fitness Score: 0.5468750000000001
+INFO:root:Generation no: 38
+INFO:root:Best Fitness Score: 0.5468750000000001
+INFO:root:Generation no: 39
+INFO:root:Best Fitness Score: 0.5468750000000001
+INFO:root:Generation no: 40
+INFO:root:Best Fitness Score: 0.5468750000000001
+INFO:root:Generation no: 41
+INFO:root:Best Fitness Score: 0.5468750000000001
+INFO:root:Generation no: 42
+INFO:root:Best Fitness Score: 0.5468750000000001
+INFO:root:Generation no: 43
+INFO:root:Best Fitness Score: 0.5468750000000001
+INFO:root:Generation no: 44
+INFO:root:Best Fitness Score: 0.5468750000000001
+INFO:root:Generation no: 45
+INFO:root:Best Fitness Score: 0.5468750000000001
+INFO:root:Generation no: 46
+INFO:root:Best Fitness Score: 0.5468750000000001
+INFO:root:Generation no: 47
+INFO:root:Best Fitness Score: 0.5468750000000001
+INFO:root:Generation no: 48
+INFO:root:Best Fitness Score: 0.5468750000000001
+INFO:root:Generation no: 49
+INFO:root:Best Fitness Score: 0.5468750000000001
+INFO:root:Generation no: 50
+INFO:root:Best Fitness Score: 0.5468750000000001
+INFO:root:*********** EVOLUTIONARY CLASSIFICATION WITH DYNAMIC ENSEMBLE SELECTION ********* 
+INFO:root:Version: 0.1.5
+INFO:root:Execution Run: 0
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:Best Fitness Score: 0.6006944444444443
+INFO:root:Generation no: 2
+INFO:root:Best Fitness Score: 0.6006944444444443
+INFO:root:Generation no: 3
+INFO:root:Best Fitness Score: 0.6006944444444443
+INFO:root:Generation no: 4
+INFO:root:Best Fitness Score: 0.6107638888888888
+INFO:root:Generation no: 5
+INFO:root:Best Fitness Score: 0.6152777777777778
+INFO:root:Generation no: 6
+INFO:root:Best Fitness Score: 0.6152777777777778
+INFO:root:Generation no: 7
+INFO:root:Best Fitness Score: 0.6152777777777778
+INFO:root:Generation no: 8
+INFO:root:Best Fitness Score: 0.6152777777777778
+INFO:root:Generation no: 9
+INFO:root:Best Fitness Score: 0.6152777777777778
+INFO:root:Generation no: 10
+INFO:root:Best Fitness Score: 0.6163194444444444
+INFO:root:Execution Run: 1
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:Best Fitness Score: 0.6083333333333333
+INFO:root:Generation no: 2
+INFO:root:Best Fitness Score: 0.6083333333333333
+INFO:root:Generation no: 3
+INFO:root:Best Fitness Score: 0.6097222222222222
+INFO:root:Generation no: 4
+INFO:root:Best Fitness Score: 0.6097222222222222
+INFO:root:Generation no: 5
+INFO:root:Best Fitness Score: 0.6097222222222222
+INFO:root:Generation no: 6
+INFO:root:Best Fitness Score: 0.6121527777777778
+INFO:root:Generation no: 7
+INFO:root:Best Fitness Score: 0.6121527777777778
+INFO:root:Generation no: 8
+INFO:root:Best Fitness Score: 0.6121527777777778
+INFO:root:Generation no: 9
+INFO:root:Best Fitness Score: 0.6121527777777778
+INFO:root:Generation no: 10
+INFO:root:Best Fitness Score: 0.6142361111111111
+INFO:root:*********** EVOLUTIONARY CLASSIFICATION WITH DYNAMIC ENSEMBLE SELECTION ********* 
+INFO:root:Version: 0.1.5
+INFO:root:Execution Run: 0
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:Best Fitness Score: 0.8267361111111111
+INFO:root:Generation no: 2
+INFO:root:Best Fitness Score: 0.8267361111111111
+INFO:root:Generation no: 3
+INFO:root:Best Fitness Score: 0.8270833333333334
+INFO:root:Generation no: 4
+INFO:root:Best Fitness Score: 0.8270833333333334
+INFO:root:Generation no: 5
+INFO:root:Best Fitness Score: 0.8479166666666667
+INFO:root:Generation no: 6
+INFO:root:Best Fitness Score: 0.8479166666666667
+INFO:root:Generation no: 7
+INFO:root:Best Fitness Score: 0.8479166666666667
+INFO:root:Generation no: 8
+INFO:root:Best Fitness Score: 0.8479166666666667
+INFO:root:Generation no: 9
+INFO:root:Best Fitness Score: 0.8479166666666667
+INFO:root:Generation no: 10
+INFO:root:Best Fitness Score: 0.8479166666666667
+INFO:root:Execution Run: 1
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:Best Fitness Score: 0.8329861111111112
+INFO:root:Generation no: 2
+INFO:root:Best Fitness Score: 0.8385416666666666
+INFO:root:Generation no: 3
+INFO:root:Best Fitness Score: 0.8427083333333333
+INFO:root:Generation no: 4
+INFO:root:Best Fitness Score: 0.8427083333333333
+INFO:root:Generation no: 5
+INFO:root:Best Fitness Score: 0.8427083333333333
+INFO:root:Generation no: 6
+INFO:root:Best Fitness Score: 0.8427083333333333
+INFO:root:Generation no: 7
+INFO:root:Best Fitness Score: 0.8440972222222222
+INFO:root:Generation no: 8
+INFO:root:Best Fitness Score: 0.8451388888888889
+INFO:root:Generation no: 9
+INFO:root:Best Fitness Score: 0.8513888888888889
+INFO:root:Generation no: 10
+INFO:root:Best Fitness Score: 0.8513888888888889
+INFO:root:*********** EVOLUTIONARY CLASSIFICATION WITH DYNAMIC ENSEMBLE SELECTION ********* 
+INFO:root:Version: 0.1.5
+INFO:root:Execution Run: 0
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:Best Fitness Score: 0.8190972222222221
+INFO:root:Generation no: 2
+INFO:root:Best Fitness Score: 0.8371527777777779
+INFO:root:Generation no: 3
+INFO:root:Best Fitness Score: 0.8392361111111112
+INFO:root:Generation no: 4
+INFO:root:Best Fitness Score: 0.8402777777777778
+INFO:root:Generation no: 5
+INFO:root:Best Fitness Score: 0.8402777777777778
+INFO:root:Generation no: 6
+INFO:root:Best Fitness Score: 0.8402777777777778
+INFO:root:Generation no: 7
+INFO:root:Best Fitness Score: 0.8454861111111112
+INFO:root:Generation no: 8
+INFO:root:Best Fitness Score: 0.8454861111111112
+INFO:root:Generation no: 9
+INFO:root:Best Fitness Score: 0.8454861111111112
+INFO:root:Generation no: 10
+INFO:root:Best Fitness Score: 0.8454861111111112
+INFO:root:Generation no: 11
+INFO:root:Best Fitness Score: 0.8454861111111112
+INFO:root:Generation no: 12
+INFO:root:Best Fitness Score: 0.8454861111111112
+INFO:root:Generation no: 13
+INFO:root:Best Fitness Score: 0.8583333333333334
+INFO:root:Generation no: 14
+INFO:root:Best Fitness Score: 0.8583333333333334
+INFO:root:Generation no: 15
+INFO:root:Best Fitness Score: 0.8604166666666667
+INFO:root:Generation no: 16
+INFO:root:Best Fitness Score: 0.8604166666666667
+INFO:root:Generation no: 17
+INFO:root:Best Fitness Score: 0.8604166666666667
+INFO:root:Generation no: 18
+INFO:root:Best Fitness Score: 0.8604166666666667
+INFO:root:Generation no: 19
+INFO:root:Best Fitness Score: 0.8645833333333334
+INFO:root:Generation no: 20
+INFO:root:Best Fitness Score: 0.8645833333333334
+INFO:root:Generation no: 21
+INFO:root:Best Fitness Score: 0.8645833333333334
+INFO:root:Generation no: 22
+INFO:root:Best Fitness Score: 0.8645833333333334
+INFO:root:Generation no: 23
+INFO:root:Best Fitness Score: 0.8645833333333334
+INFO:root:Generation no: 24
+INFO:root:Best Fitness Score: 0.8645833333333334
+INFO:root:Generation no: 25
+INFO:root:Best Fitness Score: 0.8645833333333334
+INFO:root:Generation no: 26
+INFO:root:Best Fitness Score: 0.8645833333333334
+INFO:root:Generation no: 27
+INFO:root:Best Fitness Score: 0.8781249999999999
+INFO:root:Generation no: 28
+INFO:root:Best Fitness Score: 0.8781249999999999
+INFO:root:Generation no: 29
+INFO:root:Best Fitness Score: 0.8781249999999999
+INFO:root:Generation no: 30
+INFO:root:Best Fitness Score: 0.8781249999999999
+INFO:root:Execution Run: 1
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:Best Fitness Score: 0.8166666666666667
+INFO:root:Generation no: 2
+INFO:root:Best Fitness Score: 0.8409722222222222
+INFO:root:Generation no: 3
+INFO:root:Best Fitness Score: 0.8472222222222222
+INFO:root:Generation no: 4
+INFO:root:Best Fitness Score: 0.8472222222222222
+INFO:root:Generation no: 5
+INFO:root:Best Fitness Score: 0.8472222222222222
+INFO:root:Generation no: 6
+INFO:root:Best Fitness Score: 0.8614583333333333
+INFO:root:Generation no: 7
+INFO:root:Best Fitness Score: 0.8684027777777777
+INFO:root:Generation no: 8
+INFO:root:Best Fitness Score: 0.8684027777777777
+INFO:root:Generation no: 9
+INFO:root:Best Fitness Score: 0.8684027777777777
+INFO:root:Generation no: 10
+INFO:root:Best Fitness Score: 0.8684027777777777
+INFO:root:Generation no: 11
+INFO:root:Best Fitness Score: 0.8684027777777777
+INFO:root:Generation no: 12
+INFO:root:Best Fitness Score: 0.8684027777777777
+INFO:root:Generation no: 13
+INFO:root:Best Fitness Score: 0.8684027777777777
+INFO:root:Generation no: 14
+INFO:root:Best Fitness Score: 0.8684027777777777
+INFO:root:Generation no: 15
+INFO:root:Best Fitness Score: 0.8684027777777777
+INFO:root:Generation no: 16
+INFO:root:Best Fitness Score: 0.8684027777777777
+INFO:root:Generation no: 17
+INFO:root:Best Fitness Score: 0.8701388888888888
+INFO:root:Generation no: 18
+INFO:root:Best Fitness Score: 0.8701388888888888
+INFO:root:Generation no: 19
+INFO:root:Best Fitness Score: 0.8701388888888888
+INFO:root:Generation no: 20
+INFO:root:Best Fitness Score: 0.8701388888888888
+INFO:root:Generation no: 21
+INFO:root:Best Fitness Score: 0.8701388888888888
+INFO:root:Generation no: 22
+INFO:root:Best Fitness Score: 0.8701388888888888
+INFO:root:Generation no: 23
+INFO:root:Best Fitness Score: 0.8701388888888888
+INFO:root:Generation no: 24
+INFO:root:Best Fitness Score: 0.8701388888888888
+INFO:root:Generation no: 25
+INFO:root:Best Fitness Score: 0.8701388888888888
+INFO:root:Generation no: 26
+INFO:root:Best Fitness Score: 0.8701388888888888
+INFO:root:Generation no: 27
+INFO:root:Best Fitness Score: 0.8701388888888888
+INFO:root:Generation no: 28
+INFO:root:Best Fitness Score: 0.8701388888888888
+INFO:root:Generation no: 29
+INFO:root:Best Fitness Score: 0.8701388888888888
+INFO:root:Generation no: 30
+INFO:root:Best Fitness Score: 0.8736111111111111
+INFO:root:*********** EVOLUTIONARY CLASSIFICATION WITH DYNAMIC ENSEMBLE SELECTION ********* 
+INFO:root:Version: 0.1.5
+INFO:root:Execution Run: 0
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:*********** EVOLUTIONARY CLASSIFICATION WITH DYNAMIC ENSEMBLE SELECTION ********* 
+INFO:root:Version: 0.1.5
+INFO:root:Execution Run: 0
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:*********** EVOLUTIONARY CLASSIFICATION WITH DYNAMIC ENSEMBLE SELECTION ********* 
+INFO:root:Version: 0.1.5
+INFO:root:Execution Run: 0
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:*********** EVOLUTIONARY CLASSIFICATION WITH DYNAMIC ENSEMBLE SELECTION ********* 
+INFO:root:Version: 0.1.5
+INFO:root:Execution Run: 0
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:*********** EVOLUTIONARY CLASSIFICATION WITH DYNAMIC ENSEMBLE SELECTION ********* 
+INFO:root:Version: 0.1.5
+INFO:root:Execution Run: 0
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:*********** EVOLUTIONARY CLASSIFICATION WITH DYNAMIC ENSEMBLE SELECTION ********* 
+INFO:root:Version: 0.1.5
+INFO:root:Execution Run: 0
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:*********** EVOLUTIONARY CLASSIFICATION WITH DYNAMIC ENSEMBLE SELECTION ********* 
+INFO:root:Version: 0.1.5
+INFO:root:Execution Run: 0
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:*********** EVOLUTIONARY CLASSIFICATION WITH DYNAMIC ENSEMBLE SELECTION ********* 
+INFO:root:Version: 0.1.5
+INFO:root:Execution Run: 0
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:*********** EVOLUTIONARY CLASSIFICATION WITH DYNAMIC ENSEMBLE SELECTION ********* 
+INFO:root:Version: 0.1.5
+INFO:root:Execution Run: 0
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:Best Fitness Score: 0.804513888888889
+INFO:root:Generation no: 2
+INFO:root:Best Fitness Score: 0.804513888888889
+INFO:root:Generation no: 3
+INFO:root:Best Fitness Score: 0.825
+INFO:root:Generation no: 4
+INFO:root:Best Fitness Score: 0.825
+INFO:root:Generation no: 5
+INFO:root:Best Fitness Score: 0.825
+INFO:root:Generation no: 6
+INFO:root:Best Fitness Score: 0.825
+INFO:root:Generation no: 7
+INFO:root:Best Fitness Score: 0.8364583333333333
+INFO:root:Generation no: 8
+INFO:root:Best Fitness Score: 0.8364583333333333
+INFO:root:Generation no: 9
+INFO:root:Best Fitness Score: 0.8434027777777777
+INFO:root:Generation no: 10
+INFO:root:Best Fitness Score: 0.8434027777777777
+INFO:root:Generation no: 11
+INFO:root:Best Fitness Score: 0.84375
+INFO:root:Generation no: 12
+INFO:root:Best Fitness Score: 0.84375
+INFO:root:Generation no: 13
+INFO:root:Best Fitness Score: 0.84375
+INFO:root:Generation no: 14
+INFO:root:Best Fitness Score: 0.8548611111111111
+INFO:root:Generation no: 15
+INFO:root:Best Fitness Score: 0.8548611111111111
+INFO:root:Generation no: 16
+INFO:root:Best Fitness Score: 0.8548611111111111
+INFO:root:Generation no: 17
+INFO:root:Best Fitness Score: 0.8548611111111111
+INFO:root:Generation no: 18
+INFO:root:Best Fitness Score: 0.8548611111111111
+INFO:root:Generation no: 19
+INFO:root:Best Fitness Score: 0.8548611111111111
+INFO:root:Generation no: 20
+INFO:root:Best Fitness Score: 0.8548611111111111
+INFO:root:Generation no: 21
+INFO:root:Best Fitness Score: 0.8548611111111111
+INFO:root:Generation no: 22
+INFO:root:Best Fitness Score: 0.8548611111111111
+INFO:root:Generation no: 23
+INFO:root:Best Fitness Score: 0.8548611111111111
+INFO:root:Generation no: 24
+INFO:root:Best Fitness Score: 0.8548611111111111
+INFO:root:Generation no: 25
+INFO:root:Best Fitness Score: 0.8548611111111111
+INFO:root:Generation no: 26
+INFO:root:Best Fitness Score: 0.8548611111111111
+INFO:root:Generation no: 27
+INFO:root:Best Fitness Score: 0.8548611111111111
+INFO:root:Generation no: 28
+INFO:root:Best Fitness Score: 0.8548611111111111
+INFO:root:Generation no: 29
+INFO:root:Best Fitness Score: 0.8548611111111111
+INFO:root:Generation no: 30
+INFO:root:Best Fitness Score: 0.8548611111111111
+INFO:root:Execution Run: 1
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:Best Fitness Score: 0.8052083333333333
+INFO:root:Generation no: 2
+INFO:root:Best Fitness Score: 0.8052083333333333
+INFO:root:Generation no: 3
+INFO:root:Best Fitness Score: 0.846875
+INFO:root:Generation no: 4
+INFO:root:Best Fitness Score: 0.846875
+INFO:root:Generation no: 5
+INFO:root:Best Fitness Score: 0.846875
+INFO:root:Generation no: 6
+INFO:root:Best Fitness Score: 0.846875
+INFO:root:Generation no: 7
+INFO:root:Best Fitness Score: 0.846875
+INFO:root:Generation no: 8
+INFO:root:Best Fitness Score: 0.846875
+INFO:root:Generation no: 9
+INFO:root:Best Fitness Score: 0.846875
+INFO:root:Generation no: 10
+INFO:root:Best Fitness Score: 0.846875
+INFO:root:Generation no: 11
+INFO:root:Best Fitness Score: 0.846875
+INFO:root:Generation no: 12
+INFO:root:Best Fitness Score: 0.846875
+INFO:root:Generation no: 13
+INFO:root:Best Fitness Score: 0.846875
+INFO:root:Generation no: 14
+INFO:root:Best Fitness Score: 0.8496527777777778
+INFO:root:Generation no: 15
+INFO:root:Best Fitness Score: 0.8545138888888889
+INFO:root:Generation no: 16
+INFO:root:Best Fitness Score: 0.8545138888888889
+INFO:root:Generation no: 17
+INFO:root:Best Fitness Score: 0.8545138888888889
+INFO:root:Generation no: 18
+INFO:root:Best Fitness Score: 0.8545138888888889
+INFO:root:Generation no: 19
+INFO:root:Best Fitness Score: 0.8545138888888889
+INFO:root:Generation no: 20
+INFO:root:Best Fitness Score: 0.8545138888888889
+INFO:root:Generation no: 21
+INFO:root:Best Fitness Score: 0.8545138888888889
+INFO:root:Generation no: 22
+INFO:root:Best Fitness Score: 0.8545138888888889
+INFO:root:Generation no: 23
+INFO:root:Best Fitness Score: 0.8545138888888889
+INFO:root:Generation no: 24
+INFO:root:Best Fitness Score: 0.8545138888888889
+INFO:root:Generation no: 25
+INFO:root:Best Fitness Score: 0.8545138888888889
+INFO:root:Generation no: 26
+INFO:root:Best Fitness Score: 0.8545138888888889
+INFO:root:Generation no: 27
+INFO:root:Best Fitness Score: 0.8545138888888889
+INFO:root:Generation no: 28
+INFO:root:Best Fitness Score: 0.8545138888888889
+INFO:root:Generation no: 29
+INFO:root:Best Fitness Score: 0.8545138888888889
+INFO:root:Generation no: 30
+INFO:root:Best Fitness Score: 0.8545138888888889
+INFO:root:*********** EVOLUTIONARY CLASSIFICATION WITH DYNAMIC ENSEMBLE SELECTION ********* 
+INFO:root:Version: 0.1.5
+INFO:root:Execution Run: 0
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:Best Fitness Score: 0.8107638888888888
+INFO:root:Generation no: 2
+INFO:root:Best Fitness Score: 0.8152777777777778
+INFO:root:Generation no: 3
+INFO:root:Best Fitness Score: 0.8152777777777778
+INFO:root:Generation no: 4
+INFO:root:Best Fitness Score: 0.8197916666666666
+INFO:root:Generation no: 5
+INFO:root:Best Fitness Score: 0.8350694444444443
+INFO:root:Generation no: 6
+INFO:root:Best Fitness Score: 0.8350694444444443
+INFO:root:Generation no: 7
+INFO:root:Best Fitness Score: 0.8350694444444443
+INFO:root:Generation no: 8
+INFO:root:Best Fitness Score: 0.8350694444444443
+INFO:root:Generation no: 9
+INFO:root:Best Fitness Score: 0.8350694444444443
+INFO:root:Generation no: 10
+INFO:root:Best Fitness Score: 0.8350694444444443
+INFO:root:Generation no: 11
+INFO:root:Best Fitness Score: 0.8350694444444443
+INFO:root:Generation no: 12
+INFO:root:Best Fitness Score: 0.8350694444444443
+INFO:root:Generation no: 13
+INFO:root:Best Fitness Score: 0.8350694444444443
+INFO:root:Generation no: 14
+INFO:root:Best Fitness Score: 0.8350694444444443
+INFO:root:Generation no: 15
+INFO:root:Best Fitness Score: 0.8350694444444443
+INFO:root:Generation no: 16
+INFO:root:Best Fitness Score: 0.836111111111111
+INFO:root:Generation no: 17
+INFO:root:Best Fitness Score: 0.8423611111111111
+INFO:root:Generation no: 18
+INFO:root:Best Fitness Score: 0.8427083333333333
+INFO:root:Generation no: 19
+INFO:root:Best Fitness Score: 0.8427083333333333
+INFO:root:Generation no: 20
+INFO:root:Best Fitness Score: 0.8427083333333333
+INFO:root:Generation no: 21
+INFO:root:Best Fitness Score: 0.845486111111111
+INFO:root:Generation no: 22
+INFO:root:Best Fitness Score: 0.845486111111111
+INFO:root:Generation no: 23
+INFO:root:Best Fitness Score: 0.8684027777777777
+INFO:root:Generation no: 24
+INFO:root:Best Fitness Score: 0.8684027777777777
+INFO:root:Generation no: 25
+INFO:root:Best Fitness Score: 0.8684027777777777
+INFO:root:Generation no: 26
+INFO:root:Best Fitness Score: 0.8684027777777777
+INFO:root:Generation no: 27
+INFO:root:Best Fitness Score: 0.8684027777777777
+INFO:root:Generation no: 28
+INFO:root:Best Fitness Score: 0.8684027777777777
+INFO:root:Generation no: 29
+INFO:root:Best Fitness Score: 0.8684027777777777
+INFO:root:Generation no: 30
+INFO:root:Best Fitness Score: 0.8684027777777777
+INFO:root:Execution Run: 1
+INFO:root:Get and Process the Data
+INFO:root:Initialize the Population
+INFO:root:Generation no: 1
+INFO:root:Best Fitness Score: 0.8024305555555555
+INFO:root:Generation no: 2
+INFO:root:Best Fitness Score: 0.8427083333333333
+INFO:root:Generation no: 3
+INFO:root:Best Fitness Score: 0.8503472222222223
+INFO:root:Generation no: 4
+INFO:root:Best Fitness Score: 0.8503472222222223
+INFO:root:Generation no: 5
+INFO:root:Best Fitness Score: 0.8503472222222223
+INFO:root:Generation no: 6
+INFO:root:Best Fitness Score: 0.8506944444444445
+INFO:root:Generation no: 7
+INFO:root:Best Fitness Score: 0.8506944444444445
+INFO:root:Generation no: 8
+INFO:root:Best Fitness Score: 0.8506944444444445
+INFO:root:Generation no: 9
+INFO:root:Best Fitness Score: 0.8506944444444445
+INFO:root:Generation no: 10
+INFO:root:Best Fitness Score: 0.8506944444444445
+INFO:root:Generation no: 11
+INFO:root:Best Fitness Score: 0.8506944444444445
+INFO:root:Generation no: 12
+INFO:root:Best Fitness Score: 0.8506944444444445
+INFO:root:Generation no: 13
+INFO:root:Best Fitness Score: 0.8517361111111112
+INFO:root:Generation no: 14
+INFO:root:Best Fitness Score: 0.8517361111111112
+INFO:root:Generation no: 15
+INFO:root:Best Fitness Score: 0.8517361111111112
+INFO:root:Generation no: 16
+INFO:root:Best Fitness Score: 0.8517361111111112
+INFO:root:Generation no: 17
+INFO:root:Best Fitness Score: 0.8604166666666667
+INFO:root:Generation no: 18
+INFO:root:Best Fitness Score: 0.8604166666666667
+INFO:root:Generation no: 19
+INFO:root:Best Fitness Score: 0.8604166666666667
+INFO:root:Generation no: 20
+INFO:root:Best Fitness Score: 0.8604166666666667
+INFO:root:Generation no: 21
+INFO:root:Best Fitness Score: 0.8604166666666667
+INFO:root:Generation no: 22
+INFO:root:Best Fitness Score: 0.8760416666666666
+INFO:root:Generation no: 23
+INFO:root:Best Fitness Score: 0.8760416666666666
+INFO:root:Generation no: 24
+INFO:root:Best Fitness Score: 0.8760416666666666
+INFO:root:Generation no: 25
+INFO:root:Best Fitness Score: 0.8760416666666666
+INFO:root:Generation no: 26
+INFO:root:Best Fitness Score: 0.8760416666666666
+INFO:root:Generation no: 27
+INFO:root:Best Fitness Score: 0.8760416666666666
+INFO:root:Generation no: 28
+INFO:root:Best Fitness Score: 0.8760416666666666
+INFO:root:Generation no: 29
+INFO:root:Best Fitness Score: 0.8760416666666666
+INFO:root:Generation no: 30
+INFO:root:Best Fitness Score: 0.8760416666666666

@@ -18,6 +18,7 @@ from src.EvolutionaryLearning.Fitness_Evaluation import Fitness_Evaluation
 
 def get_solution_info(solution_info_dict, cd, pop_origin, features_per_classifiers, i, f, solution_idx):
     # keep the info from each solution
+
     if i > solution_idx:
         pop_origin = solution_info_dict[i-1].population_producer
     solution_info = Solution_Info(cd.solution_dict[i], pop_origin)
@@ -26,6 +27,7 @@ def get_solution_info(solution_info_dict, cd, pop_origin, features_per_classifie
     solution_info.fitness_score = f.fitness_value[i]
     solution_info.diversity_score = f.diversity_value[i]
     solution_info.accuracy_score = f.accuracy_value[i]
+    solution_info.accuracy_ens_score = f.score_ens
     solution_info_dict[i] = solution_info
 
 
@@ -42,7 +44,6 @@ class Evolutionary_Classification:
 
     def train_evaluate(self, cd, classifiers, data, features_per_classifiers, rep, solution_idx):
         mc = Multiple_Classifiers(self.multiple_classification_models_params, classifiers)
-        clf = classifiers.classifier_dict[0]
         for i in cd.solution_dict:
             if rep == '2D':
                 clf = classifiers.classifier_dict[i]
@@ -126,16 +127,30 @@ class Evolutionary_Classification:
         features_per_classifiers = {}
         if representation == '1D':
             f = self.train_evaluate(cd, classifiers, data, features_per_classifiers, representation, solution_idx)
+            previous_D = 0
+            previous_A = -1
             for i in cd.solution_dict:
                 fitness_values[i] = f.fitness_value[i]
                 get_solution_info(solution_info_dict, cd, population_producer, features_per_classifiers, i, f, solution_idx)
+                if i > solution_idx:
+                    previous_A = solution_info_dict[i-1].accuracy_ens_score
+                    previous_D = previous_D + solution_info_dict[i-1].diversity_score * f.w[0]
+            if previous_A > -1 and population_producer == 'current':
+                f.adjust_lambda(previous_A, previous_D)
         elif representation == '2D':
+            previous_D = 0
+            previous_A = -1
             for i in cd.solution_dict:
                 # for each classifier
                 f = self.train_evaluate(cd, classifiers, data, features_per_classifiers, representation, solution_idx)
                 fitness_values[i] = f.fitness_value  # For each solution save the fitness value
                 # keep the info from each solution
                 get_solution_info(solution_info_dict, cd, population_producer, features_per_classifiers, i, f, solution_idx)
+                if i > solution_idx:
+                    previous_A = solution_info_dict[i - 1].accuracy_ens_score
+                    previous_D = previous_D + solution_info_dict[i - 1].diversity_score * f.w[0]
+            if previous_A > -1:
+                f.adjust_lambda(previous_A, previous_D)
 
         return cd.solution_dict, fitness_values, solution_info_dict
 

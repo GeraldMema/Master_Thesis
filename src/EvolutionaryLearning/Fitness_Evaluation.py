@@ -85,7 +85,6 @@ class Fitness_Evaluation:
             count = self.predictions_size
 
         Di = different_guess / count  # Change from paper (Normalize)
-
         return Di
 
     def diversity(self, y_true):
@@ -101,6 +100,36 @@ class Fitness_Evaluation:
 
     def calc_fitness_per_classifier(self, Di, solution_idx):
         Ai = self.scores[solution_idx]
-        self.fitness_value[solution_idx] = ((1 - self.alpha) * Ai) + (self.alpha * Di)
+        self.fitness_value[solution_idx] = Ai + (self.alpha * Di)
         self.accuracy_value[solution_idx] = Ai
         self.diversity_value[solution_idx] = Di
+
+    def adjust_lambda(self, previous_accuracy, previous_diversity):
+        """
+
+        1. we never change lambda if the ensemble error E is decreasing while we consider new networks;
+        2. we change lambda if:
+            a.population error E_ens is not increasing and the population diversity D_ens is decreasing;
+                diversity seems to be under-emphasized and we increase lambda
+            b. E_ens is increasing and D_ens is not decreasing; diversity seems to be over-emphasized and we decrease A
+        """
+
+        # Calc Diversity
+        D = 0
+        A = self.score_ens
+        for clf in self.diversity_value:
+            D = D + self.diversity_value[clf]
+        if len(self.diversity_value) > 0:
+            D = D / len(self.diversity_value)
+        # We never change lambda if the ensemble error E is decreasing while
+        if A > previous_accuracy:
+            return
+        else:
+            # population error E_ens is not increasing and the population diversity D_ens is decreasing
+            if D <= previous_diversity:
+                self.alpha = 1.2 * self.alpha # increase 20% the lambda
+            else:
+                # E_ens is increasing and D_ens is not decreasing; diversity seems to be over-emphasized and we decrease A
+                self.alpha = 0.8 * self.alpha  # decrease 20% the lambda
+
+

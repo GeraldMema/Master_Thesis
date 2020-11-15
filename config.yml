@@ -7,8 +7,8 @@ evolutionary_learning_params:
   crossover_percentage: 0.7
   mutation_percentage: 0.15
   mutation_rate: 0.6
-  max_generations: 50
-  fitness_lambda: 0.01
+  max_generations: 30
+  fitness_lambda: 0.3
 
 evolutionary_learning_methods:
   chromosome_representation: 1D
