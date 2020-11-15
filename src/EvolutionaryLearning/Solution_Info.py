@@ -7,6 +7,8 @@ class Solution_Info:
         self.chromosome = solution
         self.features_per_classifiers = None
         self.fitness_score = -1
+        self.diversity_score = -1
+        self.accuracy_score = -1
         self.best_fusion_method = None
         self.population_producer = population_producer
         self.shape = solution.shape

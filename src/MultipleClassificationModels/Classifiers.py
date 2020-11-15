@@ -17,9 +17,12 @@ from sklearn.ensemble import GradientBoostingClassifier
 
 def possible_classifiers():
     return {
+        'DT2': DecisionTreeClassifier(max_depth=2),
         'DT3': DecisionTreeClassifier(max_depth=3),
         'DT4': DecisionTreeClassifier(max_depth=4),
         'DT5': DecisionTreeClassifier(max_depth=5),
+        'DT6': DecisionTreeClassifier(max_depth=6),
+        'DT7': DecisionTreeClassifier(max_depth=7),
         'LR': LogisticRegression(),
         'SGD': SGDClassifier(),
         'MLP': MLPClassifier(alpha=1, max_iter=1000),
@@ -36,9 +39,9 @@ def possible_classifiers():
 
 def comparison_classifiers():
     return {
-        'XGBoost': XGBClassifier(),
-        'GBoost': GradientBoostingClassifier(max_depth=5, random_state=0),
-        'RF': RandomForestClassifier(max_depth=5, random_state=0),
+        'XGBoost': XGBClassifier(n_estimators=15),
+        'GBoost': GradientBoostingClassifier(n_estimators=15, max_depth=5, random_state=0),
+        'RF': RandomForestClassifier(n_estimators=15, max_depth=5, random_state=0),
         'DT': DecisionTreeClassifier(max_depth=5)
     }
 

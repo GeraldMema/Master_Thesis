@@ -6,6 +6,7 @@ import numpy.random as npr
 def roulette_wheel_selection(solution_dict, fitness_values):
     # function to fortune wheel
     def fortune_wheel():
+
         max = sum([fitness_values[i] for i in fitness_values])
         selection_probs = [fitness_values[i] / max for i in fitness_values]
         return npr.choice(len(fitness_values), p=selection_probs)
@@ -14,7 +15,8 @@ def roulette_wheel_selection(solution_dict, fitness_values):
     p1 = fortune_wheel()
     p2 = fortune_wheel()
     while p2 == p1:
-        print("Loop in parent selection")
+        print('p1: ', p1)
+        print('p2: ', p2)
         p1 = fortune_wheel()
         p2 = fortune_wheel()
     mate.append(solution_dict[p1])
@@ -56,11 +58,11 @@ def random_selection(solution_dict):
 
 
 class Parent_Selection:
-    def __init__(self, solution_dict, fitness_values, parent_selection_method=None):
-        self.parent_selection_method = parent_selection_method
-        if parent_selection_method == 'roulette_wheel_selection':
+    def __init__(self, solution_dict, fitness_values, evolutionary_learning_methods):
+        self.parent_selection_method = evolutionary_learning_methods['parent_selection_method']
+        if self.parent_selection_method == 'roulette_wheel_selection':
             self.mate = roulette_wheel_selection(solution_dict, fitness_values)
-        elif parent_selection_method == 'tournament_selection':
+        elif self.parent_selection_method == 'tournament_selection':
             self.mate = tournament_selection(solution_dict, fitness_values)
         else:
             self.mate = random_selection(solution_dict)

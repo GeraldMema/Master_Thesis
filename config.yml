@@ -1,41 +1,45 @@
 project_params:
-  version: 0.1.1
-  execution_runs: 1
+  version: 0.1.3
+  execution_runs: 2
 
 evolutionary_learning_params:
-  population_size: 10
-  crossover_percentage: 0.8
-  mutation_percentage: 0.45
-  mutation_rate: 0.25
-  max_generations: 10
-  fitness_lambda: 0.2
+  population_size: 15
+  crossover_percentage: 0.7
+  mutation_percentage: 0.15
+  mutation_rate: 0.6
+  max_generations: 50
+  fitness_lambda: 0.01
 
 evolutionary_learning_methods:
-  chromosome_representation: 2D
-  crossover_methods: three_point_crossover
-  mutation_methods: bit_string_mutation
-  parent_selection_method: roulette_wheel_selection
+  chromosome_representation: 1D
+  crossover_methods: commonality_based_crossover
+  mutation_methods: bit_flip_mutation
+  parent_selection_method: random_selection
+  diversity_only_error: True
 
 multiple_classification_models_params:
   fusion_method: majority_voting
   heterogeneous_classification: True
   cross_val: 5
   fitness_score_metric: f1_micro
-  selected_classifiers: [DT3, DT4, DT5, GaussianNB, SGD, Perceptron, KNN1]
+  selected_classifiers: [DT5]
 
 dynamic_ensemble_selection_params:
 
 data_params:
-  dataset: digits
+  dataset: wine
   path: data/
-  filename: train.csv
-  target: label
-  ID:
   normalization: Standardization
 
 evaluation_params:
   score_metric: f1_micro
   path: results
+  error_analysis: True
+  error_analysis_params: [population_size,crossover_percentage,
+                          mutation_percentage,mutation_rate,
+                          fitness_lambda,crossover_methods,
+                          mutation_methods,parent_selection_method,
+                          dataset, normalization]
 
 
 

@@ -7,11 +7,7 @@ class Data_Transformation:
         self.transformation_method = transformation_method
         self.transformed_data = None
 
-    def transform_data(self, data, target):
-        label = data[target]
-        scaled_dataset = data.drop(target, axis=1)
-        data = scaled_dataset.values
-        scale = None
+    def transform_data(self, data):
         if self.transformation_method == "MinMax":
             scale = preprocessing.MinMaxScaler()
         elif self.transformation_method == "Standardization":
@@ -21,7 +17,5 @@ class Data_Transformation:
         else:
             scale = None
         if scale:
-            scaled_data = scale.fit_transform(data)
-            scaled_dataset = pd.DataFrame(scaled_data, columns=scaled_dataset.columns)
-            scaled_dataset[target] = label
-            self.transformed_data = scaled_dataset
+            scaled_data = scale.fit_transform(data.values)
+            return pd.DataFrame(scaled_data, columns=data.columns)

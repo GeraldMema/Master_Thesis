@@ -1,0 +1,45 @@
+-----------------------------------------------------------------------------------------------------
+General Information:
+-----------------------------------------------------------------------------------------------------
+Computational results obtained on: 2020-11-04 20:09:52.942284
+The fitness_value is equal to: 1.2635416666666666
+Total time to find the best solution: 11301.423130512238
+-----------------------------------------------------------------------------------------------------
+My Algorithm score: 0.9566666666666667
+My Algorithm execution time: 143.47
+XGBoost score: 0.9682142857142857
+XGBoost execution time: 550.14
+GBoost score: 0.9578571428571429
+GBoost execution time: 1552.52
+RF score: 0.8532142857142857
+RF execution time: 5.02
+DT score: 0.6532142857142857
+DT execution time: 1.79
+-----------------------------------------------------------------------------------------------------
+Evolutionary Learning Params
+Population Size: 8
+Crossover Percentage: 0.6
+Mutation Percentage: 0.35
+Mutation Rate: 0.25
+Max Generations: 8
+Fitness Lambda (Accuracy Diversity trade off): 0.3
+-----------------------------------------------------------------------------------------------------
+Evolutionary Learning Methods
+Chromosome Representation: 2D
+Crossover Method: three_point_crossover
+Mutation Method: bit_string_mutation
+Parent Selection Method: roulette_wheel_selection
+-----------------------------------------------------------------------------------------------------
+Multiple Classification Models Params
+Fusion Method: majority_voting
+Heterogeneous Classification: True
+Cross Validation: 5.
+Fitness Score Metric: f1_micro
+Selected Classifiers: ['KNN1']
+-----------------------------------------------------------------------------------------------------
+Dynamic Ensemble Selection Params
+-----------------------------------------------------------------------------------------------------
+Data Params
+-----------------------------------------------------------------------------------------------------
+Dataset: digits
+Dataset Normalization Method: Standardization

@@ -1,4 +1,3 @@
-
 from sklearn.model_selection import cross_val_score
 from scipy import stats as s
 from sklearn.metrics import f1_score
@@ -11,37 +10,52 @@ class Multiple_Classifiers:
 
     def __init__(self, multiple_classification_models_params, classifiers):
         self.classifiers = classifiers
-        self.predictions_per_classifier = {}
+        self.predictions_per_solution = {}
         self.scores = {}
+        self.scores_per_solution = {}
+        self.score_ens = -1
         self.predictions = []
         self.fusion_method = multiple_classification_models_params['fusion_method']
         self.evaluation_metric = multiple_classification_models_params['fitness_score_metric']
+        self.cross_validation = multiple_classification_models_params['cross_val']
 
-    def fit(self, X_train, y_train, clf):
+    def fit(self, X_train, y_train, solution_idx):
         """
         Add description
         """
-        return self.classifiers.classifier_models[clf].fit(X_train, y_train)
+        return self.classifiers.classifier_models[solution_idx].fit(X_train, y_train)
 
-    def predict(self, X_test, clf_model, clf):
+    def predict_per_solution(self, X_test, clf_model, solution_idx):
         """
         Add description
         """
-        self.predictions_per_classifier[clf] = clf_model.predict(X_test)
+        self.predictions_per_solution[solution_idx] = clf_model.predict(X_test)
 
-    def score_additional(self, X, y, clf_model, clf, scoring_method='f1_micro', cv=5):
+    def score_additional(self, X, y, clf_model, solution_idx):
         """
         Add description
         """
-        all_scores = cross_val_score(clf_model, X, y, scoring=scoring_method, cv=cv)
-        self.scores[clf] = all_scores.mean()
+        cv = self.cross_validation
+        all_scores = cross_val_score(clf_model, X, y, scoring=self.evaluation_metric, cv=cv)
+        self.scores[solution_idx] = all_scores.mean()
 
-    def score(self, y_cv, clf):
+    def score_per_solution(self, y_cv, solution_idx):
         """
         Add description
         """
         if self.evaluation_metric == 'f1_micro':
-            self.scores[clf] = f1_score(y_cv, self.predictions_per_classifier[clf], average='micro')
+            self.scores[solution_idx] = f1_score(y_cv, self.predictions_per_solution[solution_idx], average='micro')
+        elif self.evaluation_metric == 'f1_macro':
+            self.scores[solution_idx] = f1_score(y_cv, self.predictions_per_solution[solution_idx], average='macro')
+
+    def score_ensemble(self, y_cv):
+        """
+        Add description
+        """
+        if self.evaluation_metric == 'f1_micro':
+            self.score_ens = f1_score(y_cv, self.predictions, average='micro')
+        elif self.evaluation_metric == 'f1_macro':
+            self.score_ens = f1_score(y_cv, self.predictions, average='macro')
 
     def predict_ensemble(self, m):
         """
@@ -51,7 +65,8 @@ class Multiple_Classifiers:
         if self.fusion_method == 'majority_voting':
             for i in range(m):
                 guess = []
-                for clf in self.predictions_per_classifier:
-                    guess.append(self.predictions_per_classifier[clf][i])
-                y_hat = s.mode(guess)[0][0]
+                for solution_idx in self.predictions_per_solution:
+                    guess.append(self.predictions_per_solution[solution_idx][i])
+
+                y_hat = s.mode(guess)[0][0]  # we can extract and the number of voting
                 self.predictions.append(y_hat)

@@ -21,7 +21,7 @@ class Models_Evaluation:
         # Produce the final results
         for clf in train_data_per_classifier:
             model = mc.fit(train_data_per_classifier[clf], y_train, clf)
-            mc.predict(test_data_per_classifier[clf], model, clf)
+            mc.predict_per_solution(test_data_per_classifier[clf], model, clf)
         m = len(y_test)
         mc.predict_ensemble(m)
 

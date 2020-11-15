@@ -1,0 +1,41 @@
+-----------------------------------------------------------------------------------------------------
+General Information:
+-----------------------------------------------------------------------------------------------------
+Computational results obtained on: 2020-11-05 11:20:34.500375
+The fitness_value is equal to: 0.9880952380952381
+Total time to find the best solution: 225.98384189605713
+-----------------------------------------------------------------------------------------------------
+My Algorithm score: 0.6895238095238095
+My Algorithm execution time: 1.63
+RF score: 0.7010714285714286
+RF execution time: 0.27
+DT score: 0.6841666666666667
+DT execution time: 1.77
+-----------------------------------------------------------------------------------------------------
+Evolutionary Learning Params
+Population Size: 8
+Crossover Percentage: 0.8
+Mutation Percentage: 0.65
+Mutation Rate: 0.25
+Max Generations: 8
+Fitness Lambda (Accuracy Diversity trade off): 0.3
+-----------------------------------------------------------------------------------------------------
+Evolutionary Learning Methods
+Chromosome Representation: 2D
+Crossover Method: three_point_crossover
+Mutation Method: bit_string_mutation
+Parent Selection Method: roulette_wheel_selection
+-----------------------------------------------------------------------------------------------------
+Multiple Classification Models Params
+Fusion Method: majority_voting
+Heterogeneous Classification: True
+Cross Validation: 5.
+Fitness Score Metric: f1_micro
+Selected Classifiers: ['DT5', 'DT5', 'DT5']
+-----------------------------------------------------------------------------------------------------
+Dynamic Ensemble Selection Params
+-----------------------------------------------------------------------------------------------------
+Data Params
+-----------------------------------------------------------------------------------------------------
+Dataset: digits
+Dataset Normalization Method: Standardization

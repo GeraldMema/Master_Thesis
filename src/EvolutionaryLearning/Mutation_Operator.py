@@ -80,8 +80,10 @@ def bit_string_mutation(mutant_array, mutation_rate, representation_method):
 
 
 class Mutation_Operator:
-    def __init__(self, parent, mutation_rate, mutation_method, representation_method):
-        self.mutation_operator = mutation_method
+    def __init__(self, parent, evolutionary_learning_methods, evolutionary_learning_params):
+        mutation_method = evolutionary_learning_methods['mutation_methods']
+        mutation_rate = evolutionary_learning_params['mutation_rate']
+        representation_method = evolutionary_learning_methods['chromosome_representation']
         valid_mutant = False
         while not valid_mutant:
             if mutation_method == "Bit String Mutation":

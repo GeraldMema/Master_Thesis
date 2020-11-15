@@ -1,0 +1,41 @@
+-----------------------------------------------------------------------------------------------------
+General Information:
+-----------------------------------------------------------------------------------------------------
+The Best Solution Score is: 0.6702380952380953
+The Best Solution Score come from crossover population
+Total time to find the best solution: 213.32522296905518
+-----------------------------------------------------------------------------------------------------
+My Algorithm score: 0.6708333333333333
+My Algorithm execution time: 3.39
+RF score: 0.6841666666666667
+RF execution time: 0.27
+DT score: 0.6765476190476191
+DT execution time: 1.76
+-----------------------------------------------------------------------------------------------------
+Evolutionary Learning Params
+Population Size: 15
+Crossover Percentage: 0.7
+Mutation Percentage: 0.35
+Mutation Rate: 0.3
+Max Generations: 2
+Fitness Lambda (Accuracy Diversity trade off): 0.1
+-----------------------------------------------------------------------------------------------------
+Evolutionary Learning Methods
+Chromosome Representation: 2D
+Crossover Method: uniform_crossover
+Mutation Method: bit_string_mutation
+Parent Selection Method: roulette_wheel_selection
+-----------------------------------------------------------------------------------------------------
+Multiple Classification Models Params
+Fusion Method: majority_voting
+Heterogeneous Classification: True
+Cross Validation: 5.
+Fitness Score Metric: f1_micro
+Selected Classifiers: ['DT3', 'DT4', 'DT5']
+-----------------------------------------------------------------------------------------------------
+Dynamic Ensemble Selection Params
+-----------------------------------------------------------------------------------------------------
+Data Params
+-----------------------------------------------------------------------------------------------------
+Dataset: digits
+Dataset Normalization Method: Standardization

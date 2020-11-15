@@ -12,7 +12,7 @@ class Solution_Representation:
         self.max_no_classifiers = max_no_classifiers
         self.representation_method = evolutionary_learning_methods['chromosome_representation']
         if self.representation_method == '1D':
-            self.chromosome_length = max_no_features + max_no_classifiers
+            self.chromosome_length = max_no_features
         elif self.representation_method == '2D':
             self.chromosome_length = max_no_features
         elif self.representation_method == 'dual':
@@ -20,26 +20,21 @@ class Solution_Representation:
         else:
             self.chromosome_length = -1
 
-    def oneD_representation(self, selected_classifiers, selected_features):
+    def oneD_representation(self, selected_features):
         """
         In this representation, we present a solution as a 1D numpy array with a following format:
-        1) the first n values are representing the features (n=no_features)
-        2) the last k values are representing the classifiers (k=no_classifiers)
-        3) size of list = n+k
+        The first n values are representing the features (n=no_features)
 
         :param
-        selected_classifiers: a list of selected classifiers
         selected_features: a list of selected features
 
         :return:
         chromosome: a numpy array which represent our solution
         """
 
-        self.chromosome = np.zeros(self.max_no_features+self.max_no_classifiers)
+        self.chromosome = np.zeros(self.max_no_features)
         for feat in selected_features:
             self.chromosome[feat] = 1
-        for clf in selected_classifiers:
-            self.chromosome[clf + self.max_no_features] = 1
 
     def twoD_representation(self, feat_per_clf):
         """

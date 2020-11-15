@@ -1,9 +1,11 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn import preprocessing
-
+from sklearn.datasets import load_breast_cancer, load_iris, load_digits, load_wine
+import numpy as np
 
 from src.DataProcessing.Data_Transformation import Data_Transformation
+
 
 class Data:
     """
@@ -12,11 +14,10 @@ class Data:
 
     def __init__(self, data_params, sep=','):
         self.features_dict = {}
-        self.data_path = data_params['path'] + data_params['filename']
+        self.dataset = data_params['dataset']
+        # self.data_path = data_params['path'] + data_params['filename']
         self.sep = sep
-        self.target = data_params['target']
         self.ID = None
-        self.Id_name = data_params['ID']
         self.X_train = None
         self.y_train = None
         self.X_cv = None
@@ -26,35 +27,31 @@ class Data:
         self.features = None
         self.transformation_method = data_params['normalization']
 
-    def process(self):
-        # read data
-        data = pd.read_csv(self.data_path, self.sep)
-
-        # delete the primary key
-        if self.Id_name:
-            self.ID = data[self.Id_name]
-            del data[self.Id_name]
-
-        # label encoding
-        le = preprocessing.LabelEncoder()
-        data[self.target] = le.fit_transform(data[self.target])
-
+    def process(self, root_dir):
+        """
+        Add description here
+        """
+        if self.dataset == 'iris':
+            data, target = load_iris(return_X_y=True, as_frame=True)
+        elif self.dataset == 'digits':
+            data, target = load_digits(return_X_y=True, as_frame=True)
+        elif self.dataset == 'breast_cancer':
+            data, target = load_breast_cancer(return_X_y=True, as_frame=True)
+        elif self.dataset == 'wine':
+            data, target = load_wine(return_X_y=True, as_frame=True)
+        else:
+            print('Wrong dataset input')
+            return
         # Transform data
-        transformer = Data_Transformation('MinMax')
-        transformer.transform_data(data, self.target)
+        transformer = Data_Transformation(self.transformation_method)
+        transformed_data = transformer.transform_data(data)
 
         # WARNING: TEST has more data than CV
         # split test CV
-        train, test_data = train_test_split(transformer.transformed_data, test_size=0.2)
-        train_data, cv_data = train_test_split(train, test_size=0.2)
-
-        self.y_train = train_data[self.target]
-        self.X_train = train_data.drop([self.target], axis=1)
-        self.y_test = test_data[self.target]
-        self.X_test = test_data.drop([self.target], axis=1)
-        self.y_cv = cv_data[self.target]
-        self.X_cv = cv_data.drop([self.target], axis=1)
+        X_train, self.X_test, y_train, self.y_test = train_test_split(transformed_data, target, test_size=0.2)
+        self.X_train, self.X_cv, self.y_train, self.y_cv = train_test_split(X_train, y_train, test_size=0.2)
 
         self.features = self.X_train.columns
         for i in range(len(self.features)):
             self.features_dict[i] = self.features[i]
+
