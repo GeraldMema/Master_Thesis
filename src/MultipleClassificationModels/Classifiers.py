@@ -37,24 +37,25 @@ def possible_classifiers():
     }
 
 
-def comparison_classifiers():
-    return {
-        'XGBoost': XGBClassifier(n_estimators=15),
-        'GBoost': GradientBoostingClassifier(n_estimators=15, max_depth=5, random_state=0),
-        'RF': RandomForestClassifier(n_estimators=15, max_depth=5, random_state=0),
-        'DT': DecisionTreeClassifier(max_depth=5)
-    }
-
 
 class Classifiers:
 
     def __init__(self, multiple_classification_models_params):
         self.classifier_models = {}
         self.classifier_dict = {}
+        self.comparison_classifiers = {}
+        self.max_depth = multiple_classification_models_params['max_depth']
         self.all_possible_classifiers = possible_classifiers()
-        self.comparison_classifiers = comparison_classifiers()
         self.selected_classifiers = list(multiple_classification_models_params['selected_classifiers'])
         self.classifier_selection()
+
+    def set_comparison_classifiers(self, n_estimators):
+        self.comparison_classifiers = {
+            'XGBoost': XGBClassifier(n_estimators = n_estimators),
+            'GBoost': GradientBoostingClassifier(n_estimators = n_estimators, max_depth=self.max_depth, random_state=0),
+            'RF': RandomForestClassifier(n_estimators=n_estimators, max_depth=self.max_depth, random_state=0),
+            'DT': DecisionTreeClassifier(max_depth=self.max_depth)
+        }
 
     def classifier_selection(self):
         i = 0

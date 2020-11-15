@@ -39,7 +39,7 @@ evaluation_params:
   path: results
   error_analysis: False
   error_analysis_params: [population_size,crossover_percentage,
-                          mutation_percentage,mutation_rate,max_generations,
+                          mutation_percentage,mutation_rate,
                           fitness_lambda,crossover_methods,
                           mutation_methods,parent_selection_method,
                           dataset, normalization]

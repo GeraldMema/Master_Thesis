@@ -80,6 +80,12 @@ class Report:
             f"Dataset: {cfg['data_params']['dataset']}" + "\n")
         file_handler.write(
             f"Dataset Normalization Method: {cfg['data_params']['normalization']}" + "\n")
+        file_handler.write(
+            "----------------------------------CLASSIFIERS GUESS VS PREDICTIONS-------------------------------------------------" + "\n")
+        for useful_info in self.evaluation_results['MY_ALG'][2].useful_info:
+            file_handler.write(f"Different Predictions: {self.evaluation_results['MY_ALG'][2].useful_info[useful_info][0]}" )
+            file_handler.write(f"  Majority Voting: {self.evaluation_results['MY_ALG'][2].useful_info[useful_info][1]}")
+            file_handler.write(f"  Actual: {self.evaluation_results['MY_ALG'][2].useful_info[useful_info][2]}" + "\n")
         file_handler.close()
 
         return self.best_solution.fitness_score, self.evaluation_results['MY_ALG'][0]

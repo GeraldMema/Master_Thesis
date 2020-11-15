@@ -1,5 +1,5 @@
 project_params:
-  version: 0.1.4
+  version: 0.1.5
   execution_runs: 2
 
 evolutionary_learning_params:
@@ -23,18 +23,19 @@ multiple_classification_models_params:
   cross_val: 5
   fitness_score_metric: f1_micro
   selected_classifiers: [DT5]
+  max_depth: 5
 
 dynamic_ensemble_selection_params:
 
 data_params:
-  dataset: wine
+  dataset: digits
   path: data/
   normalization: Standardization
 
 evaluation_params:
   score_metric: f1_micro
   path: results
-  error_analysis: True
+  error_analysis: False
   error_analysis_params: [population_size,crossover_percentage,
                           mutation_percentage,mutation_rate,
                           fitness_lambda,crossover_methods,

@@ -18,12 +18,8 @@ import os
 
 
 def evolutionary_classification():
-    if need_error_analysis:
-        path = param_path
-    else:
-        path = run_path
     process = Evolutionary_Classification(cfg)
-    report = process.apply_evolutionary_classification(c, data, path)
+    report = process.apply_evolutionary_classification(cfg,ROOT_DIR)
     best_fitness_score, final_prediction_score = report.process_results(cfg)
     return best_fitness_score, final_prediction_score
 
@@ -61,7 +57,7 @@ if __name__ == "__main__":
     folder_name = "Computational_Results_" + timestamp.strftime("%d-%b-%y")
     folder_path = os.path.join(cfg['evaluation_params']['path'], folder_name)
     if need_error_analysis:
-        save_path = os.path.join(folder_path, "Error Analysis: Results_" + timestamp.strftime("%d-%b-%y_%H-%M-%S"))
+        save_path = os.path.join(folder_path, "Error Analysis - Results_" + timestamp.strftime("%d-%b-%y_%H-%M-%S"))
     else:
         save_path = os.path.join(folder_path, "Results_" + timestamp.strftime("%d-%b-%y_%H-%M-%S"))
 
@@ -69,15 +65,6 @@ if __name__ == "__main__":
     if not os.path.exists(ROOT_DIR + '\\' + save_path):
         os.makedirs(ROOT_DIR + '\\' + save_path)
     os.chdir(ROOT_DIR + '\\' + save_path)
-
-
-
-    # Get the classifiers
-    c = Classifiers(cfg['multiple_classification_models_params'])
-    # Get the data
-    logging.info("Get and Process the Data")
-    data = Data(cfg['data_params'])
-    data.process(ROOT_DIR)
 
     # If error analysis is needed
     if need_error_analysis:
@@ -91,7 +78,7 @@ if __name__ == "__main__":
             best_fitness_score_progress = []
             final_preds_score_progress = []
             ea_param_values = cfg_all[params_for_error_analysis[ea_param]][ea_param]
-
+            default_val = cfg[params_for_error_analysis[ea_param]][ea_param]
             for val in ea_param_values:  # for each value in this param
                 param_path = os.path.join(error_analysis_path, 'Value ' + str(val))
                 # create folder
@@ -102,11 +89,13 @@ if __name__ == "__main__":
                 best_fitness_score, final_prediction_score = evolutionary_classification()
                 best_fitness_score_progress.append(best_fitness_score)
                 final_preds_score_progress.append(final_prediction_score)
+                cfg[params_for_error_analysis[ea_param]][ea_param] = default_val
                 os.chdir(ROOT_DIR + '\\' + param_path)
             # Plot score per error analysis param
+            os.chdir(ROOT_DIR + '\\' + error_analysis_path)
             plt_error_analysis = Visualization()
             plt_error_analysis.plot_error_analysis(best_fitness_score_progress, final_preds_score_progress, ea_param_values, ea_param)
-            os.chdir(ROOT_DIR + '\\' + error_analysis_path)
+
 
     else:
         for run in range(runs):

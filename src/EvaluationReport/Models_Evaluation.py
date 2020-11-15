@@ -20,16 +20,16 @@ class Models_Evaluation:
         mc = Multiple_Classifiers(params, Classifiers(params))
         # Produce the final results
         for clf in train_data_per_classifier:
-            model = mc.fit(train_data_per_classifier[clf], y_train, clf)
+            model = mc.fit_1D(train_data_per_classifier[clf], y_train)
             mc.predict_per_solution(test_data_per_classifier[clf], model, clf)
         m = len(y_test)
-        mc.predict_ensemble(m)
+        mc.predict_ensemble(m, True, y_test)
 
         # My Algorithm
         final_score = self.get_score(y_test, mc.predictions)
         stop = round((time.time() - start_time), 2)
 
-        return final_score, stop
+        return final_score, stop, mc
 
     def other_evaluation(self, model, X_train, y_train, X_test, y_test):
         start_time = time.time()

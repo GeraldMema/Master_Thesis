@@ -1,0 +1,45 @@
+-----------------------------------------------------------------------------------------------------
+General Information:
+-----------------------------------------------------------------------------------------------------
+The Best Solution Score is: 0.7873958333333333
+The Best Solution Score come from [crossover] population
+Total time to find the best solution: 18.228262901306152
+-----------------------------------------------------------------------------------------------------
+My Algorithm score: 0.7166666666666667
+My Algorithm execution time: 0.04
+XGBoost score: 0.9277777777777778
+XGBoost execution time: 0.3
+GBoost score: 0.9083333333333333
+GBoost execution time: 1.28
+RF score: 0.8972222222222223
+RF execution time: 0.04
+DT score: 0.675
+DT execution time: 0.01
+-----------------------------------------------------------------------------------------------------
+Evolutionary Learning Params
+Population Size: 15
+Crossover Percentage: 0.7
+Mutation Percentage: 0.15
+Mutation Rate: 0.6
+Max Generations: 50
+Fitness Lambda (Accuracy Diversity trade off): 0.01
+-----------------------------------------------------------------------------------------------------
+Evolutionary Learning Methods
+Chromosome Representation: 1D
+Crossover Method: commonality_based_crossover
+Mutation Method: bit_flip_mutation
+Parent Selection Method: random_selection
+-----------------------------------------------------------------------------------------------------
+Multiple Classification Models Params
+Fusion Method: majority_voting
+Heterogeneous Classification: True
+Cross Validation: 5.
+Fitness Score Metric: f1_micro
+Selected Classifiers: ['DT5']
+-----------------------------------------------------------------------------------------------------
+Dynamic Ensemble Selection Params
+-----------------------------------------------------------------------------------------------------
+Data Params
+-----------------------------------------------------------------------------------------------------
+Dataset: digits
+Dataset Normalization Method: Standardization

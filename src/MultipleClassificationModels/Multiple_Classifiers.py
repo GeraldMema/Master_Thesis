@@ -18,12 +18,21 @@ class Multiple_Classifiers:
         self.fusion_method = multiple_classification_models_params['fusion_method']
         self.evaluation_metric = multiple_classification_models_params['fitness_score_metric']
         self.cross_validation = multiple_classification_models_params['cross_val']
+        self.useful_info = {}
 
     def fit(self, X_train, y_train, solution_idx):
         """
         Add description
         """
+
         return self.classifiers.classifier_models[solution_idx].fit(X_train, y_train)
+
+    def fit_1D(self, X_train, y_train):
+        """
+        Add description
+        """
+        clf = self.classifiers.classifier_dict[0]
+        return self.classifiers.classifier_models[clf].fit(X_train, y_train)
 
     def predict_per_solution(self, X_test, clf_model, solution_idx):
         """
@@ -57,7 +66,7 @@ class Multiple_Classifiers:
         elif self.evaluation_metric == 'f1_macro':
             self.score_ens = f1_score(y_cv, self.predictions, average='macro')
 
-    def predict_ensemble(self, m):
+    def predict_ensemble(self, m, is_final=False, y_test=None):
         """
         Add description
         """
@@ -67,6 +76,7 @@ class Multiple_Classifiers:
                 guess = []
                 for solution_idx in self.predictions_per_solution:
                     guess.append(self.predictions_per_solution[solution_idx][i])
-
                 y_hat = s.mode(guess)[0][0]  # we can extract and the number of voting
+                if is_final:
+                    self.useful_info[i] = set(guess), y_hat, y_test.iloc[i]
                 self.predictions.append(y_hat)

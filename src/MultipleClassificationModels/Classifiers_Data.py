@@ -46,11 +46,14 @@ class Classifiers_Data:
             cv_data_per_classifier = {}
             test_data_per_classifier = {}
             if self.pop.solution_representation.representation_method == '1D':
-                clf = classifiers_dict[0]
                 features = [features_dict[idx] for idx, i in enumerate(solution) if i == 1]
-                train_data_per_classifier[clf] = self.data.X_train[features]
-                cv_data_per_classifier[clf] = self.data.X_cv[features]
-                test_data_per_classifier[clf] = self.data.X_test[features]
+                train_data_per_classifier[p] = self.data.X_train[features]
+                cv_data_per_classifier[p] = self.data.X_cv[features]
+                test_data_per_classifier[p] = self.data.X_test[features]
+                self.train_data_per_solution[p + solution_idx] = train_data_per_classifier
+                self.cv_data_per_solution[p + solution_idx] = cv_data_per_classifier
+                self.test_data_per_solution[p + solution_idx] = test_data_per_classifier
+                self.solution_dict[p + solution_idx] = solution
             if self.pop.solution_representation.representation_method == '2D':
                 for idx, selected_features in enumerate(solution):
                     clf = classifiers_dict[idx]
@@ -58,14 +61,14 @@ class Classifiers_Data:
                     train_data_per_classifier[clf] = self.data.X_train[features]
                     cv_data_per_classifier[clf] = self.data.X_cv[features]
                     test_data_per_classifier[clf] = self.data.X_test[features]
+                self.train_data_per_solution[p + solution_idx] = train_data_per_classifier
+                self.cv_data_per_solution[p + solution_idx] = cv_data_per_classifier
+                self.test_data_per_solution[p + solution_idx] = test_data_per_classifier
+                self.solution_dict[p + solution_idx] = solution
             if self.pop.solution_representation.representation_method == 'dual':
                 # TODO: apply this based on the paper
                 continue
 
-            self.train_data_per_solution[p + solution_idx] = train_data_per_classifier
-            self.cv_data_per_solution[p + solution_idx] = cv_data_per_classifier
-            self.test_data_per_solution[p + solution_idx] = test_data_per_classifier
-            self.solution_dict[p + solution_idx] = solution
 
     def extract_data_for_ensemble_1D(self, population, clfs):
         train_data_per_classifier = {}
@@ -73,9 +76,8 @@ class Classifiers_Data:
         features_dict = self.data.features_dict
         for i in range(len(population)):
             features = [features_dict[idx] for idx, i in enumerate(population[i]) if i == 1]
-            clf = clfs.classifier_dict[0]
-            train_data_per_classifier[clf] = self.data.X_train[features]
-            test_data_per_classifier[clf] = self.data.X_test[features]
+            train_data_per_classifier[i] = self.data.X_train[features]
+            test_data_per_classifier[i] = self.data.X_test[features]
 
         return train_data_per_classifier, test_data_per_classifier
 

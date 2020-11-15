@@ -7,6 +7,8 @@ from src.EvaluationReport.Visualization import Visualization
 from src.EvaluationReport.Models_Evaluation import Models_Evaluation
 from src.EvaluationReport.Report import Report
 from src.MultipleClassificationModels.Multiple_Classifiers import Multiple_Classifiers
+from src.MultipleClassificationModels.Classifiers import Classifiers
+from src.DataProcessing.Data import Data
 from src.EvolutionaryLearning.Solution_Representation import Solution_Representation
 from src.EvolutionaryLearning.Population import Population
 from src.EvolutionaryLearning.Solution_Info import Solution_Info
@@ -38,17 +40,18 @@ class Evolutionary_Classification:
         self.data_params = cfg['data_params']
         self.evaluation_params = cfg['evaluation_params']
 
-    def train_evaluate(self, cd, population_producer, classifiers, data, features_per_classifiers, rep):
+    def train_evaluate(self, cd, classifiers, data, features_per_classifiers, rep, solution_idx):
         mc = Multiple_Classifiers(self.multiple_classification_models_params, classifiers)
         clf = classifiers.classifier_dict[0]
         for i in cd.solution_dict:
-            logging.info(str(population_producer) + '. Solution no ' + str(i))
             if rep == '2D':
                 clf = classifiers.classifier_dict[i]
+            else:
+                clf = i - solution_idx
             # fit with the corresponding training data
             X_train = cd.train_data_per_solution[i][clf]
             y_train = data.y_train
-            clf_model = mc.fit(X_train, y_train, clf)
+            clf_model = mc.fit_1D(X_train, y_train)
             # Predict from cross validation data
             X_cv = cd.cv_data_per_solution[i][clf]
             mc.predict_per_solution(X_cv, clf_model, i)
@@ -122,22 +125,28 @@ class Evolutionary_Classification:
         solution_info_dict = {}
         features_per_classifiers = {}
         if representation == '1D':
-            f = self.train_evaluate(cd, population_producer, classifiers, data, features_per_classifiers, representation)
+            f = self.train_evaluate(cd, classifiers, data, features_per_classifiers, representation, solution_idx)
             for i in cd.solution_dict:
                 fitness_values[i] = f.fitness_value[i]
                 get_solution_info(solution_info_dict, cd, population_producer, features_per_classifiers, i, f, solution_idx)
         elif representation == '2D':
             for i in cd.solution_dict:
-                logging.info(str(population_producer) + '. Solution no ' + str(i))
                 # for each classifier
-                f = self.train_evaluate(cd, population_producer, classifiers, data, features_per_classifiers, representation)
+                f = self.train_evaluate(cd, classifiers, data, features_per_classifiers, representation, solution_idx)
                 fitness_values[i] = f.fitness_value  # For each solution save the fitness value
                 # keep the info from each solution
                 get_solution_info(solution_info_dict, cd, population_producer, features_per_classifiers, i, f, solution_idx)
 
         return cd.solution_dict, fitness_values, solution_info_dict
 
-    def apply_evolutionary_classification(self, c, data, path):
+    def apply_evolutionary_classification(self, cfg,root_dir):
+
+        # Get the classifiers
+        c = Classifiers(cfg['multiple_classification_models_params'])
+        # Get the data
+        logging.info("Get and Process the Data")
+        data = Data(cfg['data_params'])
+        data.process(root_dir)
 
         # Get the features and classifiers
         features_names = data.features
@@ -199,13 +208,14 @@ class Evolutionary_Classification:
         evaluation_results['MY_ALG'] = \
             me.my_alg_evalution(train_data_per_classifier, test_data_per_classifier, data.y_train, data.y_test,
                                 self.multiple_classification_models_params)
-
+        no_estimators = len(train_data_per_classifier)
+        c.set_comparison_classifiers(no_estimators)
         for comparison_clf in c.comparison_classifiers:
             evaluation_results[comparison_clf] = me.other_evaluation(c.comparison_classifiers[comparison_clf],
                                                                      data.X_train, data.y_train, data.X_test,
                                                                      data.y_test)
         # plot the results
-        plt_fitness = Visualization(path)
+        plt_fitness = Visualization()
         plt_fitness.plot_best_score_per_generation(best_solution_per_generation)
 
         # report results

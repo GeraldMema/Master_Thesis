@@ -1,0 +1,46 @@
+-----------------------------------------------------------------------------------------------------
+General Information:
+-----------------------------------------------------------------------------------------------------
+The Best Solution Score is: 0.8099305555555555
+The Best Solution Score come from [current] population
+Total time to find the best solution: 1.7602934837341309
+-----------------------------------------------------------------------------------------------------
+My Algorithm score: 0.8805555555555555
+My Algorithm execution time: 0.22
+XGBoost score: 0.9666666666666667
+XGBoost execution time: 0.31
+GBoost score: 0.9388888888888889
+GBoost execution time: 1.27
+RF score: 0.9111111111111111
+RF execution time: 0.04
+DT score: 0.6638888888888889
+DT execution time: 0.01
+-----------------------------------------------------------------------------------------------------
+Evolutionary Learning Params
+Population Size: 15
+Crossover Percentage: 0.7
+Mutation Percentage: 0.15
+Mutation Rate: 0.6
+Max Generations: 5
+Fitness Lambda (Accuracy Diversity trade off): 0.01
+-----------------------------------------------------------------------------------------------------
+Evolutionary Learning Methods
+Chromosome Representation: 1D
+Crossover Method: commonality_based_crossover
+Mutation Method: bit_flip_mutation
+Parent Selection Method: random_selection
+-----------------------------------------------------------------------------------------------------
+Multiple Classification Models Params
+Fusion Method: majority_voting
+Heterogeneous Classification: True
+Cross Validation: 5.
+Fitness Score Metric: f1_micro
+Selected Classifiers: ['DT5']
+-----------------------------------------------------------------------------------------------------
+Dynamic Ensemble Selection Params
+-----------------------------------------------------------------------------------------------------
+Data Params
+-----------------------------------------------------------------------------------------------------
+Dataset: digits
+Dataset Normalization Method: Standardization
+----------------------------------CLASSIFIERS GUESS VS PREDICTIONS-------------------------------------------------

@@ -31,18 +31,18 @@ class Population:
         :return:
         """
 
+        global selected_features
         initial_population = []
 
-        max_no_selected_features = randrange(self.solution_representation.max_no_features)
+
         if self.solution_representation.representation_method == '1D':
             for _ in range(self.max_population_size):
                 # select random the features
                 no_features = True
                 while no_features:
-                    print(self.solution_representation.max_no_features)
+                    max_no_selected_features = randrange(self.solution_representation.max_no_features)
                     selected_features = [randrange(self.solution_representation.max_no_features) for _ in
                                          range(max_no_selected_features)]
-                    print(selected_features)
                     if len(selected_features) > 0:
                         no_features = False
                 # 1D representation function
@@ -56,6 +56,7 @@ class Population:
                 for c in range(self.solution_representation.max_no_classifiers):
                     no_features = True
                     while no_features:
+                        max_no_selected_features = randrange(self.solution_representation.max_no_features)
                         selected_features = [randrange(self.solution_representation.max_no_features) for _ in
                                              range(max_no_selected_features)]
                         if len(selected_features) > 0:
