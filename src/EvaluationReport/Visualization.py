@@ -26,9 +26,10 @@ class Visualization:
         plt.xlabel('Generation')
         fig.savefig("fitness per generation.png", bbox_inches='tight')
 
-    def plot_error_analysis(self, scores, params, param_name):
-        fig = plt.figure()
-        plt.plot(params, scores)
-        plt.ylabel('Best Score')
+    def plot_error_analysis(self, fitness_scores, final_predictions, params, param_name):
+        fig, ax = plt.subplots(nrows=1, ncols=1)  # create figure & 1 axis
+        plt.scatter(params, fitness_scores, label = 'best fitness score')
+        plt.scatter(params, final_predictions, label = 'final prediction score')
+        plt.ylabel('Scores')
         plt.xlabel(param_name)
-        self.error_analysis = fig
+        fig.savefig("fitness and accuracy per parameter value.png", bbox_inches='tight')

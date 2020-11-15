@@ -82,5 +82,5 @@ class Report:
             f"Dataset Normalization Method: {cfg['data_params']['normalization']}" + "\n")
         file_handler.close()
 
-        return self.best_solution.fitness_score
+        return self.best_solution.fitness_score, self.evaluation_results['MY_ALG'][0]
 

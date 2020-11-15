@@ -1,5 +1,5 @@
 project_params:
-  version: 0.1.3
+  version: 0.1.4
   execution_runs: 2
 
 evolutionary_learning_params:
@@ -34,7 +34,7 @@ data_params:
 evaluation_params:
   score_metric: f1_micro
   path: results
-  error_analysis: False
+  error_analysis: True
   error_analysis_params: [population_size,crossover_percentage,
                           mutation_percentage,mutation_rate,
                           fitness_lambda,crossover_methods,
