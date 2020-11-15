@@ -15,7 +15,7 @@ evolutionary_learning_methods:
   crossover_methods: commonality_based_crossover
   mutation_methods: bit_flip_mutation
   parent_selection_method: random_selection
-  diversity_only_error: True
+  diversity_only_error: False
 
 multiple_classification_models_params:
   fusion_method: majority_voting
@@ -34,7 +34,7 @@ data_params:
 evaluation_params:
   score_metric: f1_micro
   path: results
-  error_analysis: True
+  error_analysis: False
   error_analysis_params: [population_size,crossover_percentage,
                           mutation_percentage,mutation_rate,
                           fitness_lambda,crossover_methods,

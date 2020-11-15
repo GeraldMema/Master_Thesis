@@ -18,15 +18,13 @@ import os
 
 
 def evolutionary_classification():
-    process = Evolutionary_Classification(cfg)
-    report, plt_fitness = process.apply_evolutionary_classification(c, data)
-    fitness = report.process_results(cfg)
     if need_error_analysis:
         path = param_path
     else:
-        path = error_analysis_path
-    plt_fitness.fitness_generation_plot.savefig(
-        os.path.join(ROOT_DIR + '\\' + path + '\\' + str(fitness) + ".png"))
+        path = run_path
+    process = Evolutionary_Classification(cfg)
+    report = process.apply_evolutionary_classification(c, data, path)
+    fitness = report.process_results(cfg)
     return fitness
 
 

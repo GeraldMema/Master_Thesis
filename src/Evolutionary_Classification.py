@@ -14,8 +14,10 @@ from src.MultipleClassificationModels.Classifiers_Data import Classifiers_Data
 from src.EvolutionaryLearning.Fitness_Evaluation import Fitness_Evaluation
 
 
-def get_solution_info(solution_info_dict, cd, pop_origin, features_per_classifiers, i, f):
+def get_solution_info(solution_info_dict, cd, pop_origin, features_per_classifiers, i, f, solution_idx):
     # keep the info from each solution
+    if i > solution_idx:
+        pop_origin = solution_info_dict[i-1].population_producer
     solution_info = Solution_Info(cd.solution_dict[i], pop_origin)
     # Solution Info
     solution_info.features_per_classifiers = features_per_classifiers[i]
@@ -123,7 +125,7 @@ class Evolutionary_Classification:
             f = self.train_evaluate(cd, population_producer, classifiers, data, features_per_classifiers, representation)
             for i in cd.solution_dict:
                 fitness_values[i] = f.fitness_value[i]
-                get_solution_info(solution_info_dict, cd, population_producer, features_per_classifiers, i, f)
+                get_solution_info(solution_info_dict, cd, population_producer, features_per_classifiers, i, f, solution_idx)
         elif representation == '2D':
             for i in cd.solution_dict:
                 logging.info(str(population_producer) + '. Solution no ' + str(i))
@@ -131,11 +133,11 @@ class Evolutionary_Classification:
                 f = self.train_evaluate(cd, population_producer, classifiers, data, features_per_classifiers, representation)
                 fitness_values[i] = f.fitness_value  # For each solution save the fitness value
                 # keep the info from each solution
-                get_solution_info(solution_info_dict, cd, population_producer, features_per_classifiers, i, f)
+                get_solution_info(solution_info_dict, cd, population_producer, features_per_classifiers, i, f, solution_idx)
 
         return cd.solution_dict, fitness_values, solution_info_dict
 
-    def apply_evolutionary_classification(self, c, data):
+    def apply_evolutionary_classification(self, c, data, path):
 
         # Get the features and classifiers
         features_names = data.features
@@ -203,10 +205,10 @@ class Evolutionary_Classification:
                                                                      data.X_train, data.y_train, data.X_test,
                                                                      data.y_test)
         # plot the results
-        plt_fitness = Visualization()
+        plt_fitness = Visualization(path)
         plt_fitness.plot_best_score_per_generation(best_solution_per_generation)
 
         # report results
         report = Report(evaluation_results, best_solution, stop, c)
 
-        return report, plt_fitness
+        return report

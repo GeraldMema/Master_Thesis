@@ -21,7 +21,7 @@ class Report:
             "-----------------------------------------------------------------------------------------------------" + "\n")
         file_handler.write(f"The Best Solution Score is: {self.best_solution.fitness_score}" + "\n")
         file_handler.write(
-            f"The Best Solution Score come from {self.best_solution.population_producer} population" + "\n")
+            f"The Best Solution Score come from [{self.best_solution.population_producer}] population" + "\n")
         file_handler.write(f"Total time to find the best solution: {self.total_exec_time}" + "\n")
         file_handler.write(
             "-----------------------------------------------------------------------------------------------------" + "\n")
