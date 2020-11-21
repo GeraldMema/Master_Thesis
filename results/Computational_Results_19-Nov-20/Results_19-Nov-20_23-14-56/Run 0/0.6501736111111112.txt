@@ -1,0 +1,27 @@
+-----------------------------------------------------------------------------------------------------
+General Information:
+-----------------------------------------------------------------------------------------------------
+The Best Solution Score is: 0.6501736111111112
+The Best Solution Score come from [mutation] population
+Total time to find the best solution: 5.239195823669434
+-----------------------------------------------------------------------------------------------------
+My Algorithm score: 0.8833333333333333
+My Algorithm execution time: 0.12
+XGBoost score: 0.9416666666666667
+XGBoost execution time: 0.21
+GBoost score: 0.9166666666666666
+GBoost execution time: 0.86
+RF score: 0.875
+RF execution time: 0.03
+DT score: 0.7333333333333333
+DT execution time: 0.01
+-----------------------------------------------------------------------------------------------------
+Evolutionary Learning Params
+Population Size: 10
+Crossover Percentage: 0.7
+Mutation Percentage: 0.45
+Mutation Rate: 0.6
+Max Generations: 20
+Fitness Lambda (Accuracy Diversity trade off): 0.25
+-----------------------------------------------------------------------------------------------------
+Evolutionary Learning Methods

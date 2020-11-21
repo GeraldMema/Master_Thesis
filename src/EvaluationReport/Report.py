@@ -48,8 +48,6 @@ class Report:
             "-----------------------------------------------------------------------------------------------------" + "\n")
         file_handler.write("Evolutionary Learning Methods" + "\n")
         file_handler.write(
-            f"Chromosome Representation: {cfg['evolutionary_learning_methods']['chromosome_representation']}" + "\n")
-        file_handler.write(
             f"Crossover Method: {cfg['evolutionary_learning_methods']['crossover_methods']}" + "\n")
         file_handler.write(
             f"Mutation Method: {cfg['evolutionary_learning_methods']['mutation_methods']}" + "\n")

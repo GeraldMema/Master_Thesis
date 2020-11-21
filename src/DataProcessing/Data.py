@@ -12,7 +12,7 @@ class Data:
     Add Description
     """
 
-    def __init__(self, data_params, sep=','):
+    def __init__(self, data_params, run, sep=','):
         self.features_dict = {}
         self.dataset = data_params['dataset']
         # self.data_path = data_params['path'] + data_params['filename']
@@ -26,8 +26,9 @@ class Data:
         self.y_test = None
         self.features = None
         self.transformation_method = data_params['normalization']
+        self.random_state = run
 
-    def process(self, root_dir):
+    def process(self):
         """
         Add description here
         """
@@ -48,8 +49,8 @@ class Data:
 
         # WARNING: TEST has more data than CV
         # split test CV
-        X_train, self.X_test, y_train, self.y_test = train_test_split(transformed_data, target, test_size=0.2)
-        self.X_train, self.X_cv, self.y_train, self.y_cv = train_test_split(X_train, y_train, test_size=0.2)
+        X_train, self.X_test, y_train, self.y_test = train_test_split(transformed_data, target, test_size=0.2, random_state=self.random_state)
+        self.X_train, self.X_cv, self.y_train, self.y_cv = train_test_split(X_train, y_train, test_size=0.2, random_state=self.random_state)
 
         self.features = self.X_train.columns
         for i in range(len(self.features)):

@@ -1,12 +1,9 @@
-from src.MultipleClassificationModels.Classifiers import Classifiers
-
 class Classifiers_Data:
     """
     Add Description
     """
 
-    def __init__(self, data, classifiers):
-        self.classifiers = classifiers
+    def __init__(self, data):
         self.data = data
         self.pop = None
         self.train_data_per_solution = {}
@@ -32,7 +29,6 @@ class Classifiers_Data:
             population_size = self.pop.mutation_pop.shape[0]
         else:
             population_size = self.pop.current_pop.shape[0]
-        classifiers_dict = self.classifiers.classifier_dict
         features_dict = self.data.features_dict
 
         for p in range(population_size):
@@ -45,32 +41,16 @@ class Classifiers_Data:
             train_data_per_classifier = {}
             cv_data_per_classifier = {}
             test_data_per_classifier = {}
-            if self.pop.solution_representation.representation_method == '1D':
-                features = [features_dict[idx] for idx, i in enumerate(solution) if i == 1]
-                train_data_per_classifier[p] = self.data.X_train[features]
-                cv_data_per_classifier[p] = self.data.X_cv[features]
-                test_data_per_classifier[p] = self.data.X_test[features]
-                self.train_data_per_solution[p + solution_idx] = train_data_per_classifier
-                self.cv_data_per_solution[p + solution_idx] = cv_data_per_classifier
-                self.test_data_per_solution[p + solution_idx] = test_data_per_classifier
-                self.solution_dict[p + solution_idx] = solution
-            if self.pop.solution_representation.representation_method == '2D':
-                for idx, selected_features in enumerate(solution):
-                    clf = classifiers_dict[idx]
-                    features = [features_dict[idx] for idx, i in enumerate(selected_features) if i == 1]
-                    train_data_per_classifier[clf] = self.data.X_train[features]
-                    cv_data_per_classifier[clf] = self.data.X_cv[features]
-                    test_data_per_classifier[clf] = self.data.X_test[features]
-                self.train_data_per_solution[p + solution_idx] = train_data_per_classifier
-                self.cv_data_per_solution[p + solution_idx] = cv_data_per_classifier
-                self.test_data_per_solution[p + solution_idx] = test_data_per_classifier
-                self.solution_dict[p + solution_idx] = solution
-            if self.pop.solution_representation.representation_method == 'dual':
-                # TODO: apply this based on the paper
-                continue
+            features = [features_dict[idx] for idx, i in enumerate(solution) if i == 1]
+            train_data_per_classifier[p] = self.data.X_train[features]
+            cv_data_per_classifier[p] = self.data.X_cv[features]
+            test_data_per_classifier[p] = self.data.X_test[features]
+            self.train_data_per_solution[p + solution_idx] = train_data_per_classifier
+            self.cv_data_per_solution[p + solution_idx] = cv_data_per_classifier
+            self.test_data_per_solution[p + solution_idx] = test_data_per_classifier
+            self.solution_dict[p + solution_idx] = solution
 
-
-    def extract_data_for_ensemble_1D(self, population, clfs):
+    def extract_data_for_ensemble(self, population):
         train_data_per_classifier = {}
         test_data_per_classifier = {}
         features_dict = self.data.features_dict
@@ -80,18 +60,4 @@ class Classifiers_Data:
             test_data_per_classifier[i] = self.data.X_test[features]
 
         return train_data_per_classifier, test_data_per_classifier
-
-    def extract_data_for_ensemble_2D(self, solution):
-        classifiers_dict = self.classifiers.classifier_dict
-        features_dict = self.data.features_dict
-        train_data_per_classifier = {}
-        test_data_per_classifier = {}
-        for idx, selected_features in enumerate(solution):
-            clf = classifiers_dict[idx]
-            features = [features_dict[idx] for idx, i in enumerate(selected_features) if i == 1]
-            test_data_per_classifier[clf] = self.data.X_test[features]
-            train_data_per_classifier[clf] = self.data.X_train[features]
-
-        return train_data_per_classifier, test_data_per_classifier
-
 

@@ -1,5 +1,6 @@
 def error_analysis_params():
     return {
+        'lambda_factor': 'evolutionary_learning_params',
         'population_size': 'evolutionary_learning_params',
         'crossover_percentage': 'evolutionary_learning_params',
         'mutation_percentage': 'evolutionary_learning_params',

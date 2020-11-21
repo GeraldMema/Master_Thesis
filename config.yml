@@ -1,17 +1,17 @@
 project_params:
-  version: 0.1.5
+  version: 0.1.6
   execution_runs: 2
 
 evolutionary_learning_params:
-  population_size: 15
+  population_size: 10
   crossover_percentage: 0.7
-  mutation_percentage: 0.15
+  mutation_percentage: 0.45
   mutation_rate: 0.6
-  max_generations: 30
-  fitness_lambda: 0.3
+  max_generations: 10
+  fitness_lambda: 0.55
+  lambda_factor: 0.3
 
 evolutionary_learning_methods:
-  chromosome_representation: 1D
   crossover_methods: commonality_based_crossover
   mutation_methods: bit_flip_mutation
   parent_selection_method: random_selection
@@ -36,11 +36,7 @@ evaluation_params:
   score_metric: f1_micro
   path: results
   error_analysis: False
-  error_analysis_params: [population_size,crossover_percentage,
-                          mutation_percentage,mutation_rate,
-                          fitness_lambda,crossover_methods,
-                          mutation_methods,parent_selection_method,
-                          dataset, normalization]
+  error_analysis_params: [lambda_factor,fitness_lambda]
 
 
 

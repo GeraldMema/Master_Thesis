@@ -8,7 +8,8 @@ evolutionary_learning_params:
   mutation_percentage: [0.15, 0.25, 0.35]
   mutation_rate: [0.05, 0.3, 0.65]
   max_generations: [5, 10, 15]
-  fitness_lambda: [0.1, 0.25, 0.8]
+  fitness_lambda: [0.1, 0.25, 0.45, 0.8]
+  lambda_factor: [0.05,0.1,0.3,0.6]
 
 evolutionary_learning_methods:
   chromosome_representation: [1D,2D,dual]
@@ -37,8 +38,8 @@ data_params:
 evaluation_params:
   score_metric: [f1_micro,f1_macro,recall]
   path: results
-  error_analysis: False
-  error_analysis_params: [population_size,crossover_percentage,
+  error_analysis: True
+  error_analysis_params: [lambda_factor, population_size,crossover_percentage,
                           mutation_percentage,mutation_rate,
                           fitness_lambda,crossover_methods,
                           mutation_methods,parent_selection_method,

@@ -1,0 +1,75 @@
+-----------------------------------------------------------------------------------------------------
+General Information:
+-----------------------------------------------------------------------------------------------------
+The Best Solution Score is: 0.5458332855902976
+The Best Solution Score come from [mutation] population
+Total time to find the best solution: 0.3400607109069824
+-----------------------------------------------------------------------------------------------------
+My Algorithm score: 1.0
+My Algorithm execution time: 0.02
+XGBoost score: 1.0
+XGBoost execution time: 0.02
+GBoost score: 1.0
+GBoost execution time: 0.02
+RF score: 1.0
+RF execution time: 0.02
+DT score: 1.0
+DT execution time: 0.01
+-----------------------------------------------------------------------------------------------------
+Evolutionary Learning Params
+Population Size: 5
+Crossover Percentage: 0.7
+Mutation Percentage: 0.45
+Mutation Rate: 0.6
+Max Generations: 5
+Fitness Lambda (Accuracy Diversity trade off): 0.55
+-----------------------------------------------------------------------------------------------------
+Evolutionary Learning Methods
+Crossover Method: commonality_based_crossover
+Mutation Method: bit_flip_mutation
+Parent Selection Method: random_selection
+-----------------------------------------------------------------------------------------------------
+Multiple Classification Models Params
+Fusion Method: majority_voting
+Heterogeneous Classification: True
+Cross Validation: 5.
+Fitness Score Metric: f1_micro
+Selected Classifiers: ['DT5']
+-----------------------------------------------------------------------------------------------------
+Dynamic Ensemble Selection Params
+-----------------------------------------------------------------------------------------------------
+Data Params
+-----------------------------------------------------------------------------------------------------
+Dataset: iris
+Dataset Normalization Method: Standardization
+----------------------------------CLASSIFIERS GUESS VS PREDICTIONS-------------------------------------------------
+Different Predictions: {1, 2}  Majority Voting: 2  Actual: 2
+Different Predictions: {1, 2}  Majority Voting: 1  Actual: 1
+Different Predictions: {0, 1}  Majority Voting: 0  Actual: 0
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {1, 2}  Majority Voting: 1  Actual: 1
+Different Predictions: {1, 2}  Majority Voting: 1  Actual: 1
+Different Predictions: {1, 2}  Majority Voting: 1  Actual: 1
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {1, 2}  Majority Voting: 1  Actual: 1
+Different Predictions: {1, 2}  Majority Voting: 1  Actual: 1
+Different Predictions: {1, 2}  Majority Voting: 1  Actual: 1
+Different Predictions: {1, 2}  Majority Voting: 1  Actual: 1
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {1, 2}  Majority Voting: 1  Actual: 1
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {1, 2}  Majority Voting: 2  Actual: 2
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {1, 2}  Majority Voting: 2  Actual: 2
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {1, 2}  Majority Voting: 1  Actual: 1
+Different Predictions: {0, 1}  Majority Voting: 1  Actual: 1
+Different Predictions: {0}  Majority Voting: 0  Actual: 0

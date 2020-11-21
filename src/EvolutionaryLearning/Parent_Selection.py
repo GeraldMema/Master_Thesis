@@ -3,7 +3,7 @@ import random
 import numpy.random as npr
 
 
-def roulette_wheel_selection(solution_dict, fitness_values):
+def roulette_wheel_selection(s, fitness_values):
     # function to fortune wheel
     def fortune_wheel():
 
@@ -19,12 +19,12 @@ def roulette_wheel_selection(solution_dict, fitness_values):
         print('p2: ', p2)
         p1 = fortune_wheel()
         p2 = fortune_wheel()
-    mate.append(solution_dict[p1])
-    mate.append(solution_dict[p2])
+    mate.append(s[p1].chromosome)
+    mate.append(s[p2].chromosome)
     return tuple(mate)
 
 
-def tournament_selection(solution_dict, fitness_values):
+def tournament_selection(s, fitness_values):
     # function to create a tournament
     def tournament():
         tournament_size = round(0.2 * len(fitness_values))
@@ -40,30 +40,30 @@ def tournament_selection(solution_dict, fitness_values):
     while p2 == p1:
         p1 = tournament()
         p2 = tournament()
-    mate.append(solution_dict[p1])
-    mate.append(solution_dict[p2])
+    mate.append(s[p1].chromosome)
+    mate.append(s[p2].chromosome)
     return tuple(mate)
 
 
-def random_selection(solution_dict):
+def random_selection(s):
     mate = []
-    p1 = np.random.choice(list(solution_dict.keys()))
-    p2 = np.random.choice(list(solution_dict.keys()))
+    p1 = np.random.choice(list(s.keys()))
+    p2 = np.random.choice(list(s.keys()))
     while p2 == p1:
-        p1 = np.random.choice(list(solution_dict.keys()))
-        p2 = np.random.choice(list(solution_dict.keys()))
-    mate.append(solution_dict[p1])
-    mate.append(solution_dict[p2])
+        p1 = np.random.choice(list(s.keys()))
+        p2 = np.random.choice(list(s.keys()))
+    mate.append(s[p1].chromosome)
+    mate.append(s[p2].chromosome)
     return tuple(mate)
 
 
 class Parent_Selection:
-    def __init__(self, solution_dict, fitness_values, evolutionary_learning_methods):
+    def __init__(self, s, fitness_values, evolutionary_learning_methods):
         self.parent_selection_method = evolutionary_learning_methods['parent_selection_method']
         if self.parent_selection_method == 'roulette_wheel_selection':
-            self.mate = roulette_wheel_selection(solution_dict, fitness_values)
+            self.mate = roulette_wheel_selection(s, fitness_values)
         elif self.parent_selection_method == 'tournament_selection':
-            self.mate = tournament_selection(solution_dict, fitness_values)
+            self.mate = tournament_selection(s, fitness_values)
         else:
-            self.mate = random_selection(solution_dict)
+            self.mate = random_selection(s)
 

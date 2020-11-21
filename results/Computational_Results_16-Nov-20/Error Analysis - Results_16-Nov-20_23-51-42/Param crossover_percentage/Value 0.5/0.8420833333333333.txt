@@ -1,0 +1,406 @@
+-----------------------------------------------------------------------------------------------------
+General Information:
+-----------------------------------------------------------------------------------------------------
+The Best Solution Score is: 0.8420833333333333
+The Best Solution Score come from [mutation] population
+Total time to find the best solution: 13.836971044540405
+-----------------------------------------------------------------------------------------------------
+My Algorithm score: 0.7777777777777778
+My Algorithm execution time: 0.11
+XGBoost score: 0.9361111111111111
+XGBoost execution time: 0.18
+GBoost score: 0.8916666666666667
+GBoost execution time: 0.8
+RF score: 0.8805555555555555
+RF execution time: 0.02
+DT score: 0.6
+DT execution time: 0.01
+-----------------------------------------------------------------------------------------------------
+Evolutionary Learning Params
+Population Size: 10
+Crossover Percentage: 0.5
+Mutation Percentage: 0.15
+Mutation Rate: 0.6
+Max Generations: 50
+Fitness Lambda (Accuracy Diversity trade off): 0.3
+-----------------------------------------------------------------------------------------------------
+Evolutionary Learning Methods
+Chromosome Representation: 1D
+Crossover Method: commonality_based_crossover
+Mutation Method: bit_flip_mutation
+Parent Selection Method: random_selection
+-----------------------------------------------------------------------------------------------------
+Multiple Classification Models Params
+Fusion Method: majority_voting
+Heterogeneous Classification: True
+Cross Validation: 5.
+Fitness Score Metric: f1_micro
+Selected Classifiers: ['DT5']
+-----------------------------------------------------------------------------------------------------
+Dynamic Ensemble Selection Params
+-----------------------------------------------------------------------------------------------------
+Data Params
+-----------------------------------------------------------------------------------------------------
+Dataset: digits
+Dataset Normalization Method: Standardization
+----------------------------------CLASSIFIERS GUESS VS PREDICTIONS-------------------------------------------------
+Different Predictions: {8}  Majority Voting: 8  Actual: 6
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {8}  Majority Voting: 8  Actual: 6
+Different Predictions: {5}  Majority Voting: 5  Actual: 6
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {8}  Majority Voting: 8  Actual: 2
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {9}  Majority Voting: 9  Actual: 5
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {5}  Majority Voting: 5  Actual: 3
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {5}  Majority Voting: 5  Actual: 3
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {7}  Majority Voting: 7  Actual: 7
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {7}  Majority Voting: 7  Actual: 7
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {8}  Majority Voting: 8  Actual: 6
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {8}  Majority Voting: 8  Actual: 3
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {3}  Majority Voting: 3  Actual: 3
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {7}  Majority Voting: 7  Actual: 7
+Different Predictions: {3}  Majority Voting: 3  Actual: 3
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {3}  Majority Voting: 3  Actual: 3
+Different Predictions: {1}  Majority Voting: 1  Actual: 5
+Different Predictions: {2}  Majority Voting: 2  Actual: 3
+Different Predictions: {8}  Majority Voting: 8  Actual: 3
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {4, 7}  Majority Voting: 4  Actual: 4
+Different Predictions: {2}  Majority Voting: 2  Actual: 1
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {3}  Majority Voting: 3  Actual: 3
+Different Predictions: {3}  Majority Voting: 3  Actual: 3
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {7}  Majority Voting: 7  Actual: 7
+Different Predictions: {7}  Majority Voting: 7  Actual: 1
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {7}  Majority Voting: 7  Actual: 7
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {3}  Majority Voting: 3  Actual: 3
+Different Predictions: {9}  Majority Voting: 9  Actual: 5
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {8}  Majority Voting: 8  Actual: 3
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {8}  Majority Voting: 8  Actual: 7
+Different Predictions: {2}  Majority Voting: 2  Actual: 1
+Different Predictions: {9}  Majority Voting: 9  Actual: 3
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {0, 4}  Majority Voting: 4  Actual: 0
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {9}  Majority Voting: 9  Actual: 3
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {9}  Majority Voting: 9  Actual: 1
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {3}  Majority Voting: 3  Actual: 3
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {3}  Majority Voting: 3  Actual: 0
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {3}  Majority Voting: 3  Actual: 3
+Different Predictions: {7}  Majority Voting: 7  Actual: 0
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {4, 7}  Majority Voting: 4  Actual: 7
+Different Predictions: {7}  Majority Voting: 7  Actual: 7
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {8}  Majority Voting: 8  Actual: 5
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {7}  Majority Voting: 7  Actual: 7
+Different Predictions: {3}  Majority Voting: 3  Actual: 3
+Different Predictions: {3}  Majority Voting: 3  Actual: 3
+Different Predictions: {1}  Majority Voting: 1  Actual: 4
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {3}  Majority Voting: 3  Actual: 3
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {8}  Majority Voting: 8  Actual: 2
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {3}  Majority Voting: 3  Actual: 9
+Different Predictions: {3}  Majority Voting: 3  Actual: 3
+Different Predictions: {8}  Majority Voting: 8  Actual: 1
+Different Predictions: {1}  Majority Voting: 1  Actual: 5
+Different Predictions: {3}  Majority Voting: 3  Actual: 3
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {8, 5}  Majority Voting: 8  Actual: 8
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {7}  Majority Voting: 7  Actual: 7
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {8}  Majority Voting: 8  Actual: 7
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {1}  Majority Voting: 1  Actual: 9
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {7}  Majority Voting: 7  Actual: 7
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {0, 4}  Majority Voting: 4  Actual: 9
+Different Predictions: {2}  Majority Voting: 2  Actual: 1
+Different Predictions: {3}  Majority Voting: 3  Actual: 3
+Different Predictions: {8}  Majority Voting: 8  Actual: 7
+Different Predictions: {8}  Majority Voting: 8  Actual: 6
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {8}  Majority Voting: 8  Actual: 7
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {1}  Majority Voting: 1  Actual: 5
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {3}  Majority Voting: 3  Actual: 3
+Different Predictions: {2}  Majority Voting: 2  Actual: 3
+Different Predictions: {0, 6}  Majority Voting: 6  Actual: 6
+Different Predictions: {7}  Majority Voting: 7  Actual: 7
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {8}  Majority Voting: 8  Actual: 4
+Different Predictions: {9}  Majority Voting: 9  Actual: 3
+Different Predictions: {3}  Majority Voting: 3  Actual: 3
+Different Predictions: {3}  Majority Voting: 3  Actual: 3
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {9}  Majority Voting: 9  Actual: 2
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {0, 4}  Majority Voting: 4  Actual: 0
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {3}  Majority Voting: 3  Actual: 3
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {8}  Majority Voting: 8  Actual: 7
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {1}  Majority Voting: 1  Actual: 9
+Different Predictions: {5}  Majority Voting: 5  Actual: 1
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {2}  Majority Voting: 2  Actual: 1
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {3}  Majority Voting: 3  Actual: 3
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {7}  Majority Voting: 7  Actual: 7
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {1}  Majority Voting: 1  Actual: 6
+Different Predictions: {0}  Majority Voting: 0  Actual: 9
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {7}  Majority Voting: 7  Actual: 7
+Different Predictions: {0, 4}  Majority Voting: 4  Actual: 1
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {7}  Majority Voting: 7  Actual: 7
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {3}  Majority Voting: 3  Actual: 3
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {9}  Majority Voting: 9  Actual: 3
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {8}  Majority Voting: 8  Actual: 6
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {8}  Majority Voting: 8  Actual: 7
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {3}  Majority Voting: 3  Actual: 3
+Different Predictions: {0, 4}  Majority Voting: 4  Actual: 0
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {1}  Majority Voting: 1  Actual: 8
+Different Predictions: {0, 6}  Majority Voting: 6  Actual: 0
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {7}  Majority Voting: 7  Actual: 7
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {0, 4}  Majority Voting: 4  Actual: 0
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {5}  Majority Voting: 5  Actual: 4
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {0, 4}  Majority Voting: 4  Actual: 7
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {3}  Majority Voting: 3  Actual: 3
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {2}  Majority Voting: 2  Actual: 1
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {0, 4}  Majority Voting: 4  Actual: 4
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {8}  Majority Voting: 8  Actual: 3
+Different Predictions: {1}  Majority Voting: 1  Actual: 2
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {7}  Majority Voting: 7  Actual: 7
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {7}  Majority Voting: 7  Actual: 7
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {9}  Majority Voting: 9  Actual: 5
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {7}  Majority Voting: 7  Actual: 7
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {0, 4}  Majority Voting: 4  Actual: 0
+Different Predictions: {9, 1}  Majority Voting: 9  Actual: 9
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {8}  Majority Voting: 8  Actual: 3
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {8}  Majority Voting: 8  Actual: 3
+Different Predictions: {8}  Majority Voting: 8  Actual: 4
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {8}  Majority Voting: 8  Actual: 7
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {8}  Majority Voting: 8  Actual: 1
+Different Predictions: {2}  Majority Voting: 2  Actual: 3
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {8}  Majority Voting: 8  Actual: 8
+Different Predictions: {0}  Majority Voting: 0  Actual: 9
+Different Predictions: {0}  Majority Voting: 0  Actual: 8
+Different Predictions: {0}  Majority Voting: 0  Actual: 0
+Different Predictions: {8}  Majority Voting: 8  Actual: 7
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {8}  Majority Voting: 8  Actual: 6
+Different Predictions: {6}  Majority Voting: 6  Actual: 6
+Different Predictions: {9, 1}  Majority Voting: 9  Actual: 1
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {2}  Majority Voting: 2  Actual: 6
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {1}  Majority Voting: 1  Actual: 5
+Different Predictions: {9}  Majority Voting: 9  Actual: 3
+Different Predictions: {7}  Majority Voting: 7  Actual: 7
+Different Predictions: {3}  Majority Voting: 3  Actual: 3
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {2}  Majority Voting: 2  Actual: 2
+Different Predictions: {1}  Majority Voting: 1  Actual: 1
+Different Predictions: {7}  Majority Voting: 7  Actual: 7
+Different Predictions: {0, 4}  Majority Voting: 4  Actual: 4
+Different Predictions: {9}  Majority Voting: 9  Actual: 9
+Different Predictions: {2}  Majority Voting: 2  Actual: 3
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {5}  Majority Voting: 5  Actual: 5
+Different Predictions: {4}  Majority Voting: 4  Actual: 4
+Different Predictions: {0}  Majority Voting: 0  Actual: 0

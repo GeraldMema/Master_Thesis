@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-import numpy as np
+
 
 class Visualization:
 
@@ -35,4 +35,27 @@ class Visualization:
         plt.ylabel('Scores')
         plt.xlabel(param_name)
         fig.savefig("fitness and accuracy per " + param_name + " value.png", bbox_inches='tight')
+        plt.close('all')
+
+    def plot_lambdas(self, lambdas):
+        fig, ax = plt.subplots(nrows=1, ncols=1)  # create figure & 1 axis
+        plt.plot(lambdas)
+        plt.ylabel('Lambda')
+        plt.xlabel('Generations')
+        fig.savefig("Lambda per Generation.png", bbox_inches='tight')
+        plt.close('all')
+
+    def plot_scores(self, my_alg, rf, xgb, gb, dt):
+        fig, ax = plt.subplots(nrows=1, ncols=1)  # create figure & 1 axis
+        runs = [i+1 for i in range(len(my_alg))]
+        plt.scatter(runs, my_alg, label = 'My Algorithm')
+        plt.scatter(runs, rf, label = 'Random Forest')
+        plt.scatter(runs, xgb, label='XGBoost')
+        plt.scatter(runs, gb, label='Gradient Boosting')
+        plt.scatter(runs, dt, label='Decision Trees')
+        plt.ylabel('Scores')
+        plt.xlabel('Runs')
+        ax.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc='lower left',
+           ncol=2, mode="expand", borderaxespad=0.)
+        fig.savefig("Evaluation with All", bbox_inches='tight')
         plt.close('all')
