@@ -15,5 +15,16 @@ class Solution_Info:
         self.prediction_diversity = -1
         self.prediction_accuracy = -1
         self.accuracy_ens_score = -1
+        self.diversity_avg = -1
+        self.accuracy_avg = -1
+        self.fitness_avg = -1
+        self.index = -1
+
+    def set_solution_stat(self):
+        """
+
+        """
+        pass
+
 
 

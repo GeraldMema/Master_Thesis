@@ -1,43 +1,49 @@
-project_params:
-  version: 0.1.6
-  execution_runs: 2
-
-evolutionary_learning_params:
-  population_size: 10
-  crossover_percentage: 0.7
-  mutation_percentage: 0.45
-  mutation_rate: 0.6
-  max_generations: 10
-  fitness_lambda: 0.55
-  lambda_factor: 0.3
-
+data_params:
+  dataset: car_evaluation
+  filename: car.data
+  imbalanced: false
+  no_transform: false
+  normalization: false
+  path: data/
+  run_all_datasets: true
+dynamic_ensemble_selection_params: null
+evaluation_params:
+  des_data_size: 0.5
+  error_analysis: false
+  error_analysis_params:
+  - initialization_method
+  path: results
+  score_metric: f1_micro
 evolutionary_learning_methods:
-  crossover_methods: commonality_based_crossover
+  change_dataset: false
+  crossover_methods: three_point_crossover
+  diversity_only_error: false
+  initialization_method: only_ones
+  lambda_factor_strategy: mul
   mutation_methods: bit_flip_mutation
+  my_rules: false
+  one_minus_lambda: false
   parent_selection_method: random_selection
-  diversity_only_error: False
-
+  set_lambda_after: true
+evolutionary_learning_params:
+  crossover_percentage: 0.3
+  fitness_lambda: 0.9
+  lambda_factor: 0.1
+  learning_factor: 0.0
+  max_generations: 50
+  mutation_percentage: 0.4
+  mutation_rate: 0.8
+  population_size: 15
+  set_lambda_after: true
 multiple_classification_models_params:
-  fusion_method: majority_voting
-  heterogeneous_classification: True
   cross_val: 5
   fitness_score_metric: f1_micro
-  selected_classifiers: [DT5]
-  max_depth: 5
-
-dynamic_ensemble_selection_params:
-
-data_params:
-  dataset: digits
-  path: data/
-  normalization: Standardization
-
-evaluation_params:
-  score_metric: f1_micro
-  path: results
-  error_analysis: False
-  error_analysis_params: [lambda_factor,fitness_lambda]
-
-
-
-
+  fusion_method: weighted_sum
+  heterogeneous_classification: true
+  max_depth: 6
+  min_sample: 2
+  selected_classifiers:
+  - DT
+project_params:
+  execution_runs: 1
+  version: 0.1.7

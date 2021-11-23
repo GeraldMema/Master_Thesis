@@ -26,10 +26,21 @@ class Crossover_Operator:
             else:
                 print('Wrong Crossover Methods')
                 return
+
             # check offspring
             if (sum(offspring_1) != 0) and (sum(offspring_2) != 0):
                 self.offspring_1 = offspring_1
                 self.offspring_2 = offspring_2
+                valid_offspring = True
+            else:
+                print('*'*100)
+                if sum(offspring_1) == 0:
+                    self.offspring_1 = list(np.ones(len(offspring_1)))
+                    self.offspring_2 = offspring_2
+                if sum(offspring_2) == 0:
+                    self.offspring_2 = list(np.ones(len(offspring_2)))
+                    if sum(offspring_1) != 0:
+                        self.offspring_1 = offspring_1
                 valid_offspring = True
 
     def single_point_crossover(self):

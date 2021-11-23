@@ -1,0 +1,36 @@
+ten_to_thirty = ["adult", "backache", "buggyCrx", "car_evaluation",
+                             "cleve", "colic", "credit_a", "crx", "german", "heart_c", "heart_statlog",
+                             "ionosphere", "lymphography", "vehicle", "waveform_21", "wdbc", "hungarian"]
+            thirty_to_hundred = ["waveform_40", "tokyo1", "texture", "splice",
+                                 "spambase", "soybean", "sonar", "satimage", "movement_libras",
+                                 "molecular_biology_promoters", "mfeat_zernike", "mfeat_karhunen",
+                                 "mfeat_fourier", "ionosphere", "coil2000"]
+
+            possible_datasets = [
+                'allhypo',
+                'crx',
+                'ionosphere',
+                'GAMETES_Heterogeneity_20atts_1600_Het_0.4_0.2_75_EDM_2_001',
+                'churn',
+                'car',
+                'biomed',
+            ]
+
+            desired_datasets = [
+                'car_evaluation',
+                'GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1',
+                'mofn_3_7_10',
+                'parity5+5',
+                'xd6']
+            test_datasets = ['parity5+5']
+            test_datasets2 = ['analcatdata_creditscore']
+            hundred_plus = ["Hill_Valley_with_noise", "dna", "mfeat_factors", "mfeat_pixel"]
+
+            thesis_analysis_datasets = [
+                'Hill_Valley_with_noise', 'parity5+5', 'car_evaluation',
+                'crx', 'churn', 'biomed','allhypo',
+                'GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1', 'ionosphere'
+            ]
+
+            # not so good dataset
+            test_datasets3 = ['tic_tac_toe']

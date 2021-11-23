@@ -19,3 +19,5 @@ class Data_Transformation:
         if scale:
             scaled_data = scale.fit_transform(data.values)
             return pd.DataFrame(scaled_data, columns=data.columns)
+        else:
+            return data

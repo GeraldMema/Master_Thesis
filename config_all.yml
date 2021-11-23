@@ -1,15 +1,17 @@
 project_params:
   version: 0.1.0
-  execution_runs: 1
+  execution_runs: 10
 
 evolutionary_learning_params:
-  population_size: [5, 10, 15]
-  crossover_percentage: [0.2, 0.5, 0.7]
-  mutation_percentage: [0.15, 0.25, 0.35]
-  mutation_rate: [0.05, 0.3, 0.65]
-  max_generations: [5, 10, 15]
-  fitness_lambda: [0.1, 0.25, 0.45, 0.8]
-  lambda_factor: [0.05,0.1,0.3,0.6]
+  population_size: [3, 5, 7, 10, 15, 20, 30]
+  crossover_percentage: [0.3, 0.45,0.6, 0.75, 0.9]
+  mutation_percentage: [0.1, 0.25,0.4, 0.55, 0.8]
+  mutation_rate: [0.1, 0.25,0.4, 0.55, 0.8]
+  max_generations: [5, 15, 30, 60, 120]
+  fitness_lambda: [0.0, 0.1,0.2, 0.3,0.4,0.5,0.6, 0.7,0.8,0.9]
+  lambda_factor: [0.0,0.03,0.07,0.1,0.2,0.3]
+  learning_factor: [0,0.98,1]
+  set_lambda_after: [True,False]
 
 evolutionary_learning_methods:
   chromosome_representation: [1D,2D,dual]
@@ -19,31 +21,41 @@ evolutionary_learning_methods:
                       uniform_crossover,
                       commonality_based_crossover]
   mutation_methods: [bit_flip_mutation, bit_string_mutation]
-  parent_selection_method: [roulette_wheel_selection, tournament_selection, random_selection]
-  diversity_only_error: True
+  parent_selection_method: [roulette_wheel_selection, random_selection]
+  initialization_method: [random_initialization, only_ones]
+  diversity_only_error: [True,False]
+  my_rules: [True,False]
+  lambda_factor_strategy: [add,mul]
+  one_minus_lambda: [True,False]
+  set_lambda_after: [True,False]
 
 multiple_classification_models_params:
-  fusion_method: [majority_voting,weighted-average]
+  fusion_method: [majority_voting,weighted_sum]
   heterogeneous_classifiers: True
   cross_val: [5]
   evaluation_metric: [f1_micro,f1_macro,recall]
+  max_depth: [5,6]
+  min_sample: [2,4,7,10,13,17,21,25,30,40]
 
 dynamic_ensemble_selection_params:
 
 data_params:
-  dataset: [iris,digits,breast_cancer,wine]
+  dataset: [iris,digits,digits_csv,breast_cancer,wine,adult,soccer,agaricus,
+            car_evaluation,analcatdata_cyyoung8092,analcatdata_cyyoung9302, backache]
   path: data/
+  filename: [adult.data, Iris.csv, train.csv]
   normalization: [MinMax, Standardization, Normalization]
+  imbalanced: False
 
 evaluation_params:
   score_metric: [f1_micro,f1_macro,recall]
   path: results
   error_analysis: True
-  error_analysis_params: [lambda_factor, population_size,crossover_percentage,
+  error_analysis_params: [lambda_factor,learning_factor, population_size,crossover_percentage,
                           mutation_percentage,mutation_rate,
                           fitness_lambda,crossover_methods,
                           mutation_methods,parent_selection_method,
-                          dataset, normalization]
+                          fusion_method,diversity_only_error,my_rules,max_depth, set_lambda_after]
 
 
 
